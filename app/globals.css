@@ -11,6 +11,7 @@
   --color-neutral-600: hsla(180, 11%, 9%, 0.8);
   --color-neutral-900: hsla(180, 11%, 9%, 1);
   --color-gray-900: hsla(0, 0%, 35%, 1);
+  --color-white-900: hsla(0, 0%, 100%, 1);
 }
 
 @theme inline {
@@ -18,25 +19,33 @@
   --font-sans: var(--font-sans);
   --color-ring: var(--ring);
   --color-border: var(--border);
-  --color-muted: var(--muted);
+  --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-primary: var(--color-gray-50);
+  --color-muted: var(--muted);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius); 
+  --radius-xl: calc(var(--radius) * 1.25);
+  --radius-2xl: calc(var(--radius) * 1.5);
+  --radius-3xl: calc(var(--radius) * 3);
+  --radius-4xl: calc(var(--radius) * 4);
 }
 
 :root {
-  --primary: hsla(151, 71%, 39%, 1); /*Primary/600*/
-  --secondary: hsla(216, 100%, 57%, 1); /*Secondary/600*/
   --background: hsla(0, 0%, 100%, 1); /*--white-900 or #FFF*/
   --foreground: hsla(180, 11%, 9%, 1); /*--Neutral-900*/
+  --primary: hsla(151, 71%, 39%, 1); /*Primary/600*/
+  --secondary: hsla(216, 100%, 57%, 1); /*Secondary/600*/
   --card: hsla(0, 0%, 100%, 1); /*--white-900 or #FFF*/
   --card-foreground: hsla(180, 11%, 9%, 0.8); /*--Neutral-600*/
   --muted: hsla(180, 11%, 9%, 0.5); /*Neutral-500*/
   --border: hsla(180, 11%, 9%, 0.1); /*Neutral-100*/
   --ring: hsla(216, 100%, 57%, 1); /*Secondary/600*/
+  --radius: 0.5rem;
 }
 
 @layer base {
