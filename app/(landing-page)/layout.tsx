@@ -10,11 +10,11 @@ export default function LandingPageLayout({
 }>) {
   return (
     <>
-      <header className="py-2 flex h-15 items-center justify-center border-b border-neutral-50 px-4 md:py-3">
+      <header className="flex h-15 items-center border-b border-neutral-50 px-4 py-2 md:py-3">
         <NavContainer>
           <MainNav />
-          <NavLogo/>
-          <Profile/>
+          <NavLogo />
+          <Profile />
         </NavContainer>
       </header>
       <main> {children}</main>

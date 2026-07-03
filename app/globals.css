@@ -12,6 +12,7 @@
   --color-neutral-900: hsla(180, 11%, 9%, 1);
   --color-gray-900: hsla(0, 0%, 35%, 1);
   --color-white-900: hsla(0, 0%, 100%, 1);
+  --shadow-md: 0 5px 25px 0 rgba(20, 25, 25, 0.05);
 }
 
 @theme inline {

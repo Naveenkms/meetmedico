@@ -15,7 +15,7 @@ function Container({
     <Comp
       data-slot="container"
       className={cn(
-        "flex w-full max-w-300 items-center justify-between",
+        "flex w-full md:max-w-300 items-center justify-between md:mx-auto",
         className
       )}
       {...props}
