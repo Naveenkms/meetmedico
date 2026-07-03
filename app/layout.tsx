@@ -7,7 +7,7 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   style: "normal",
   subsets: ["latin", "latin-ext", "vietnamese"],
-  variable: "--font-sans",
+  variable: "--font-be-vietnam-pro",
 })
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", beVietnamPro.variable, "font-sans")}
     >
-      <body>{children}</body>
+      <body className="bg-background text-foreground">{children}</body>
     </html>
   )
 }
