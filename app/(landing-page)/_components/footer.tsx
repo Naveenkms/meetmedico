@@ -32,20 +32,20 @@ export default function Footer() {
     <footer className="flex flex-col gap-5 bg-neutral-50 px-4 py-10 md:px-37.5">
       <div className="flex flex-col items-center gap-5 md:flex-row md:justify-between">
         <LogoMinimised className="h-6 w-22.5" />
-        <ul className="flex flex-wrap gap-5 py-2.5 md:flex-nowrap md:px-5 self-stretch content-start items-start justify-center ">
+        <ul className="flex flex-wrap justify-center self-stretch py-2.5 md:flex-nowrap gap-y-5 md:gap-5 md:px-5">
           {LINKS.map(({ label, href }, i) => (
             <li
               key={i}
-              className="basis-1/2 md:basis-auto text-xs md:text-sm leading-[1.33333] md:leading-[1.28571] font-bold text-neutral-600 md:w-auto"
+              className="basis-1/2 text-xs leading-[1.33333] font-bold text-neutral-600 odd:text-right even:text-left odd:pr-5 md:w-auto md:basis-auto md:text-sm md:leading-[1.28571]"
             >
               <Link href={href}>{label}</Link>
-            </li>   
+            </li>
           ))}
         </ul>
       </div>
       <div className="h-px bg-border" />
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between gap-12.5 text-center md:text-left">
-        <div className="space-y-5 text-xs md:text-sm leading-[1.33333] md:leading-[1.28571] text-neutral-600">
+      <div className="flex flex-col items-center justify-center gap-12.5 text-center md:flex-row md:items-start md:justify-between md:text-left">
+        <div className="space-y-5 text-xs leading-[1.33333] text-neutral-600 md:text-sm md:leading-[1.28571]">
           <p>
             © 2026 MeetMedico Inc. All clinical reference guidelines are
             peer-reviewed. Emergency cases must contact local emergency
