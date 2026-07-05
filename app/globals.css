@@ -18,6 +18,7 @@
 @theme inline {
   --font-heading: var(--font-be-vietnam-pro);
   --font-sans: var(--font-be-vietnam-pro);
+  --font-league-spartan: var(--font-league-spartan);
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-primary: var(--primary);
@@ -27,6 +28,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-destructive: var(--destructive);
   --radius-sm: calc(var(--radius) * 0.5);
   --radius-md: calc(var(--radius) * 0.75);
   --radius-lg: var(--radius);
@@ -44,6 +46,7 @@
   --card: hsla(0, 0%, 100%, 1); /*--white-900 or #FFF*/
   --card-foreground: hsla(180, 11%, 9%, 0.8); /*--Neutral-600*/
   --muted: hsla(180, 11%, 9%, 0.5); /*Neutral-500*/
+  --destructive: hsla(357, 100%, 45%);
   --border: hsla(180, 11%, 9%, 0.1); /*Neutral-100*/
   --ring: hsla(216, 100%, 57%, 1); /*Secondary/600*/
   --radius: 0.5rem;

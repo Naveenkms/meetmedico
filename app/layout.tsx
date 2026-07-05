@@ -1,4 +1,4 @@
-import { Be_Vietnam_Pro } from "next/font/google"
+import { Be_Vietnam_Pro, League_Spartan } from "next/font/google"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
@@ -10,6 +10,11 @@ const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
 })
 
+const leagueSpartan = League_Spartan({
+  weight: ["400", "500"],
+  variable: "--font-league-spartan",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +24,12 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", beVietnamPro.variable, "font-sans")}
+      className={cn(
+        "antialiased",
+        beVietnamPro.variable,
+        leagueSpartan.variable,
+        "font-sans"
+      )}
     >
       <body className="bg-background text-foreground">{children}</body>
     </html>

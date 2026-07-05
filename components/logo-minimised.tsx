@@ -1,13 +1,15 @@
+import { cn } from "@/lib/utils";
+
 export default function LogoMinimised({
+  className,
   ...props
 }: React.ComponentProps<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="76"
-      height="20"
       fill="none"
       viewBox="0 0 76 20"
+      className={cn("h-5 w-19", className)}
       {...props}
     >
       <path
