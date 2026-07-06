@@ -48,7 +48,7 @@ export default function MainNav() {
           </li>
         </ul>
       </nav>
-      <Button variant="outline" className="rounded-lg p-3 md:hidden">
+      <Button variant="outline" className="rounded-lg bg-inherit p-3 md:hidden">
         <Hamburger />
       </Button>
     </>

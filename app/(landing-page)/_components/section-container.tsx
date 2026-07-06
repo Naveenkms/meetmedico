@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container"
+import { cn } from "@/lib/utils"
 
 export default function SectionContainer({
   className,
@@ -6,7 +7,10 @@ export default function SectionContainer({
 }: React.ComponentProps<typeof Container>) {
   return (
     <Container
-      className="flex flex-col justify-center gap-6 py-10 max-[75rem]:px-4 md:gap-8 md:py-20 xl:px-0"
+      className={cn(
+        "flex flex-col justify-center gap-6 py-10 max-[75rem]:px-4 md:gap-8 md:py-20 xl:px-0",
+        className
+      )}
       {...props}
     />
   )

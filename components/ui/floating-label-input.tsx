@@ -5,7 +5,7 @@ function FloatingLabelInput({
   id,
   ref,
   label,
-  className,
+
   ...props
 }: React.ComponentProps<typeof Input> & {
   label: string

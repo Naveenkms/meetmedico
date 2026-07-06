@@ -1,8 +1,5 @@
-import Image from "next/image"
-
 import SectionContainer from "../../section-container"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import MobileAppImg from "../../mobile-app-img"
 import DownloadFromApplestoreButton from "../../download-from-applestore-button"
@@ -23,7 +20,7 @@ export default function DownloadAppBannerSection() {
               </h2>
               <div className="flex gap-3 capitalize">
                 {BADGES.map((label, i) => (
-                  <Badge key={i} variant="secondary">
+                  <Badge key={i} variant="dark">
                     {label}
                   </Badge>
                 ))}

@@ -15,7 +15,7 @@ function Tabs({
       data-slot="tabs"
       data-orientation={orientation}
       className={cn(
-        "group/tabs flex has-group-data-[variant=default]/tabs-list:gap-8 has-group-data-[variant=line]/tabs-list:shadow-md data-horizontal:flex-col",
+        "group/tabs flex w-full has-group-data-[variant=line]/tabs-list:shadow-md data-horizontal:flex-col",
         className
       )}
       {...props}
@@ -24,13 +24,13 @@ function Tabs({
 }
 
 const tabsListVariants = cva(
-  "group/tabs-list peer inline-flex w-full items-center justify-center border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col md:text-sm",
+  "group/tabs-list peer inline-flex items-center justify-center overflow-x-auto border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col md:text-sm",
   {
     variants: {
       variant: {
         default:
-          "rounded-lg border-border py-1 pl-1 text-muted group-data-horizontal/tabs:h-9 md:p-1",
-        line: "border-neutral/5 h-10 rounded-t-lg text-neutral-600 md:h-10.5",
+          "w-fit rounded-lg border-border py-1 pl-1 text-muted group-data-horizontal/tabs:h-9 md:p-1",
+        line: "border-neutral/5 h-10 w-full rounded-t-lg bg-background text-neutral-600 md:h-10.5",
       },
     },
     defaultVariants: {
@@ -65,8 +65,6 @@ function TabsTrigger({
       className={cn(
         "data-active:bg-primary/10 data-active:font-bold data-active:text-primary",
         "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-        // "group-data-[variant=line]/tabs-list:data-active:bg-primary/1",
-        // "data-active:bg-background data-active:text-foreground dark:data-active:text-foreground",
         className
       )}
       {...props}
@@ -82,7 +80,7 @@ function TabsContent({
     <TabsPrimitive.Content
       data-slot="tabs-content"
       className={cn(
-        "group-data-[variant=line]/tabs-list:border-neutral-5 flex-1 outline-none group-data-[variant=line]/tabs-list:rounded-b-lg peer-data-[variant=line]:border-x peer-data-[variant=line]:border-b peer-data-[variant=line]:p-4 md:peer-data-[variant=line]:p-6",
+        "peer-data-[variant=line]:border-neutral-5 flex-1 outline-none peer-data-[variant=default]:pt-8 peer-data-[variant=line]:rounded-b-lg peer-data-[variant=line]:border-x peer-data-[variant=line]:border-b peer-data-[variant=line]:bg-background peer-data-[variant=line]:p-4 md:peer-data-[variant=default]:pt-6 md:peer-data-[variant=line]:p-6",
         className
       )}
       {...props}
