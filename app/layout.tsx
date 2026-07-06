@@ -31,7 +31,7 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body className="bg-background text-foreground">{children}</body>
+      <body className="bg-background text-foreground border-box">{children}</body>
     </html>
   )
 }

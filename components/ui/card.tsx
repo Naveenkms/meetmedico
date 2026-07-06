@@ -12,7 +12,7 @@ function Card({
       data-slot="card"
       data-size={size}
       className={cn(
-        "group/card flex flex-col overflow-hidden rounded-lg border border-primary/20 bg-card text-card-foreground ring-1 ring-foreground/10 transition-all",
+        "group/card flex flex-col overflow-hidden rounded-lg border border-primary/20 bg-card text-card-foreground transition-all",
         className
       )}
       {...props}
@@ -57,7 +57,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
-      className={cn("h-10.5 bg-primary/5", className)}
+      className={cn("border-t border-primary/20", className)}
       {...props}
     />
   )

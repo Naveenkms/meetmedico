@@ -8,7 +8,7 @@ export default function SectionContainer({
   return (
     <Container
       className={cn(
-        "flex flex-col justify-center gap-6 py-10 max-[75rem]:px-4 md:gap-8 md:py-20 xl:px-0",
+        "flex flex-col justify-center gap-6 pt-8 pb-10 max-[75rem]:px-4 md:gap-8 md:py-20 xl:px-0",
         className
       )}
       {...props}

@@ -9,7 +9,6 @@ export default function ChevronDown({ ...props }: React.ComponentProps<"svg">) {
       {...props}
     >
       <path
-        stroke="#141919"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeOpacity="0.8"
