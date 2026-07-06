@@ -28,7 +28,7 @@ export default function Banner() {
           </TabsList>
           <TabsContent value="professionals">
             <Tabs defaultValue="doctors">
-              <TabsList>
+              <TabsList className="">
                 <TabsTrigger value="doctors">Doctors</TabsTrigger>
                 <TabsTrigger value="therapists">Therapists </TabsTrigger>
                 <TabsTrigger value="pharmacists">Pharmacists</TabsTrigger>
