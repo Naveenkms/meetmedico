@@ -12,7 +12,7 @@ const BADGES: string[] = ["Top Doctors", "Top Hospitals", "Medical Events"]
 export default function DownloadAppBannerSection() {
   return (
     <section id="download-app-banner">
-      <SectionContainer>
+      <SectionContainer className="pt-0 pb-4">
         <div className="flex w-full flex-col overflow-hidden rounded-lg border border-primary/20 bg-primary/20 backdrop-blur-[7.5px] md:flex-row md:gap-15">
           <div className="flex flex-1 flex-col gap-8 p-4 md:py-10 md:pl-10">
             <div className="space-y-4">

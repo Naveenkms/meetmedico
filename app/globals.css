@@ -48,7 +48,7 @@
   --muted: hsla(180, 11%, 9%, 0.5); /*Neutral-500*/
   --destructive: hsla(357, 100%, 45%);
   --border: hsla(180, 11%, 9%, 0.1); /*Neutral-100*/
-  --ring: hsla(216, 100%, 57%, 1); /*Secondary/600*/
+  --ring: hsla(151, 71%, 39%, 1); /*Primary/600*/
   --radius: 0.5rem;
 }
 

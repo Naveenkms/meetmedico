@@ -13,7 +13,7 @@ import FindHealthServicesCard from "./find-health-services-card"
 export default function FIndHealthServicesSection() {
   return (
     <section id="find-health-services">
-      <SectionContainer className="gap-3">
+      <SectionContainer className="gap-3 pt-16">
         <TypographyH2>Find Health Services by Specialities</TypographyH2>
         <Tabs defaultValue="hospitals">
           <TabsList className="md:self-center">

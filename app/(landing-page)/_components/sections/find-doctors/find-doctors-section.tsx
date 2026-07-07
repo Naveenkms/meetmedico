@@ -17,7 +17,7 @@ import Psychiatry from "@/components/illustrations/psychiatry"
 export default function FindDoctorsSection() {
   return (
     <section id="find-doctors">
-      <SectionContainer className="gap-3">
+      <SectionContainer className="gap-3 pt-16">
         <TypographyH2>Find Doctors by Specialities/Symptoms</TypographyH2>
         <Carousel className="flex w-full flex-col gap-5 md:gap-8">
           <CarouselContent>
