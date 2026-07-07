@@ -7,85 +7,96 @@ import {
   CarouselItem,
   CarouselNavigation,
 } from "@/components/ui/carousel"
-import FindProfessionalsCard from "./find-professionals-card"
 import { Button } from "@/components/ui/button"
+import FindHealthServicesCard from "./find-health-services-card"
 
-export default function FindProfessionalsSection() {
+export default function FIndHealthServicesSection() {
   return (
-    <section id="find-professionals">
+    <section id="find-health-services">
       <SectionContainer className="gap-3">
-        <TypographyH2>Find Professionals by Specialities</TypographyH2>
-        <Tabs defaultValue="doctors">
+        <TypographyH2>Find Health Services by Specialities</TypographyH2>
+        <Tabs defaultValue="hospitals">
           <TabsList className="md:self-center">
-            <TabsTrigger value="doctors">Doctors</TabsTrigger>
-            <TabsTrigger value="therapists">Therapists </TabsTrigger>
-            <TabsTrigger value="pharmacists">Pharmacists</TabsTrigger>
-            <TabsTrigger value="lab-technicians">Lab Technicians</TabsTrigger>
+            <TabsTrigger value="hospitals">Hospitals</TabsTrigger>
+            <TabsTrigger value="pharmacies">Pharmacies </TabsTrigger>
+            <TabsTrigger value="laboratories">Laboratories</TabsTrigger>
           </TabsList>
           <TabsContent
-            value="doctors"
-            className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
+            value="hospitals"
+            className="peer-data-[variant=default]:pt-7.25 md:pt-8"
           >
-            <Carousel className="flex w-full flex-col gap-5 md:gap-8">
+            <Carousel className="flex w-full flex-col gap-7.25 md:gap-8">
               <CarouselContent>
                 <CarouselItem>
-                  <FindProfessionalsCard
+                  <FindHealthServicesCard
                     imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
+                    name="SGK Hospital & Research Centre"
+                    designation="Multi-Speciality Hospital"
+                    location="Jaipur, Rajasthan,"
                     actionButton={
                       <Button
                         variant="secondary"
                         className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
                       >
-                        View Doctors
+                        View Profile
                       </Button>
                     }
                   />
                 </CarouselItem>
                 <CarouselItem>
-                  <FindProfessionalsCard
+                  <FindHealthServicesCard
                     imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
+                    name="SGK Hospital & Research Centre"
+                    designation="Multi-Speciality Hospital"
+                    location="Jaipur, Rajasthan,"
                     actionButton={
                       <Button
                         variant="secondary"
                         className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
                       >
-                        View Doctors
+                        View Profile
                       </Button>
                     }
                   />
-                </CarouselItem>{" "}
+                </CarouselItem>
                 <CarouselItem>
-                  <FindProfessionalsCard
+                  <FindHealthServicesCard
                     imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
+                    name="SGK Hospital & Research Centre"
+                    designation="Multi-Speciality Hospital"
+                    location="Jaipur, Rajasthan,"
                     actionButton={
                       <Button
                         variant="secondary"
                         className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
                       >
-                        View Doctors
+                        View Profile
                       </Button>
                     }
                   />
-                </CarouselItem>{" "}
+                </CarouselItem>
                 <CarouselItem>
-                  <FindProfessionalsCard
+                  <FindHealthServicesCard
                     imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
+                    name="SGK Hospital & Research Centre"
+                    designation="Multi-Speciality Hospital"
+                    location="Jaipur, Rajasthan,"
+                    actionButton={
+                      <Button
+                        variant="secondary"
+                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
+                      >
+                        View Profile
+                      </Button>
+                    }
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <FindHealthServicesCard
+                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    name="SGK Hospital & Research Centre"
+                    designation="Multi-Speciality Hospital"
+                    location="Jaipur, Rajasthan,"
                     actionButton={
                       <Button
                         variant="secondary"
@@ -97,26 +108,20 @@ export default function FindProfessionalsSection() {
                   />
                 </CarouselItem>
               </CarouselContent>
-              <CarouselNavigation>Explore All Doctors</CarouselNavigation>
+              <CarouselNavigation>Explore All Hospitals</CarouselNavigation>
             </Carousel>
           </TabsContent>
           <TabsContent
-            value="therapists"
-            className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
+            value="pharmacies"
+            className="peer-data-[variant=default]:pt-7.25 md:pt-8"
           >
-            Therapists
+            pharmacies
           </TabsContent>
           <TabsContent
-            value="pharmacists"
-            className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
+            value="laboratories"
+            className="peer-data-[variant=default]:pt-7.25 md:pt-8"
           >
-            Pharmacists
-          </TabsContent>
-          <TabsContent
-            value="lab-technicians"
-            className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
-          >
-            Lab Technicians
+            Laboratories
           </TabsContent>
         </Tabs>
       </SectionContainer>

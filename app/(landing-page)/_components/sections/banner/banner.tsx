@@ -6,7 +6,7 @@ import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
 export default function Banner() {
   return (
     <section id="banner" className="bg-primary/5">
-      <SectionContainer className="gap-10 py-4 md:max-w-225">
+      <SectionContainer className="gap-10 py-6 md:max-w-225">
         <div className="flex flex-col items-center gap-6">
           <Badge variant="secondary">Certified & Verified</Badge>
           <div className="space-y-3">
