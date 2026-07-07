@@ -2,13 +2,12 @@ import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
 import { Button } from "@/components/ui/button"
 import Kidney from "@/components/illustrations/kidney"
-import FindDoctorsCard from "./find-doctora-card"
+import FindDoctorsCard from "./find-doctors-card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  CarouselNavigation,
 } from "@/components/ui/carousel"
 import Stomach from "@/components/illustrations/stomach"
 import Heart from "@/components/illustrations/heart"
@@ -113,16 +112,9 @@ export default function FindDoctorsSection() {
               />
             </CarouselItem>
           </CarouselContent>
-          <div className="flex items-center justify-center gap-[0.65625rem] md:gap-4">
-            <CarouselPrevious />
-            <Button
-              variant="outline"
-              className="h-9 px-3 py-2.5 text-xs md:h-9 md:py-2.25 md:text-sm"
-            >
-              Explore All Specialities/Symptoms
-            </Button>
-            <CarouselNext />
-          </div>
+          <CarouselNavigation>
+            Explore All Specialities/Symptoms
+          </CarouselNavigation>
         </Carousel>
       </SectionContainer>
     </section>

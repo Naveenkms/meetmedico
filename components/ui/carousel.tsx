@@ -211,6 +211,21 @@ function CarouselNext({
   )
 }
 
+function CarouselNavigation({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center justify-center gap-[0.65625rem] md:gap-4">
+      <CarouselPrevious />
+      <Button
+        variant="outline"
+        className="h-9 px-3 py-2.5 text-xs md:h-9 md:py-2.25 md:text-sm"
+      >
+        {children}
+      </Button>
+      <CarouselNext />
+    </div>
+  )
+}
+
 export {
   type CarouselApi,
   Carousel,
@@ -218,5 +233,6 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselNavigation,
   useCarousel,
 }
