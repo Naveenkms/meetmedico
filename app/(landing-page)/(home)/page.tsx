@@ -5,6 +5,7 @@ import FindDoctorsSection from "../_components/sections/find-doctors/find-doctor
 import GrowYourHealthPresenceSection from "../_components/sections/grow-your-health-presence/grow-your-health-presence-section"
 import FindProfessionalsSection from "../_components/sections/find-professionals/find-professionals-section"
 import FIndHealthServicesSection from "../_components/sections/find-health-services/find-health-services-section"
+import DiscoverEventsSection from "../_components/sections/discover-events/discover-section-section"
 
 export default function HomePage() {
   return (
@@ -17,6 +18,9 @@ export default function HomePage() {
       <Separator />
       <FIndHealthServicesSection />
       <GrowYourHealthPresenceSection />
+      <Separator />
+      <DiscoverEventsSection />
+      <Separator />
       <DownloadAppBannerSection />
     </main>
   )

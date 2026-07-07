@@ -20,7 +20,7 @@ export default function FindProfessionalsCard({
   return (
     <Card className="w-71.25">
       <CardHeader className="flex flex-col gap-5">
-        <div className="relative h-47.5 w-full">
+        <div className="relative h-47.5 w-full rounded-lg">
           <Image fill src={imgSrc} alt={name} />
         </div>
         <div className="space-y-[1.15625rem] md:space-y-4">
