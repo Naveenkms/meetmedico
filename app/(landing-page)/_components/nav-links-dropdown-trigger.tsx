@@ -12,7 +12,7 @@ export default function NavLinksDropdownTrigger({
       {...props}
     >
       {children}
-      <ChevronDown className="transition-transform group-data-[state=open]/dropdown-trigger:rotate-180 data-[state=open]:rotate-180" />
+      <ChevronDown className="rotate-0 stroke-neutral-600 transition-transform group-data-[state=open]/dropdown-trigger:rotate-180 data-[state=open]:rotate-180" />
     </button>
   )
 }

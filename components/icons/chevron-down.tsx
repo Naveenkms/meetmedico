@@ -1,4 +1,9 @@
-export default function ChevronDown({ ...props }: React.ComponentProps<"svg">) {
+import { cn } from "@/lib/utils"
+
+export default function ChevronDown({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +11,7 @@ export default function ChevronDown({ ...props }: React.ComponentProps<"svg">) {
       height="16"
       fill="none"
       viewBox="0 0 16 16"
+      className={cn("stroke-neutral-600", className)}
       {...props}
     >
       <path
