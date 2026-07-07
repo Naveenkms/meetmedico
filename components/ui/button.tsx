@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default: "rounded-lg bg-primary text-white-900 hover:bg-primary/80",
         outline:
           "rounded-xl border border-border bg-background text-primary hover:border-primary hover:bg-background/80",
-        secondary: "bg-primary/5 text-primary",
+        secondary: "bg-primary/5 text-primary hover:bg-primary/2",
         "download-app":
           "rounded-md bg-neutral-900 text-lg font-medium text-white-900",
       },

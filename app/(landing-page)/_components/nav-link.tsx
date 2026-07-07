@@ -19,7 +19,7 @@ export default function NavLink({
     <Link
       href={href}
       className={cn(
-        "text-sm text-neutral-600 transition-all",
+        "text-sm text-neutral-600 transition-all hover:text-primary",
         isActive && "font-bold text-primary",
         className
       )}

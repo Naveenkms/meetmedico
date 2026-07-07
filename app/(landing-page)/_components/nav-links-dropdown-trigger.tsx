@@ -8,7 +8,7 @@ export default function NavLinksDropdownTrigger({
 }) {
   return (
     <button
-      className="group/dropdown-trigger flex items-center gap-1 text-sm text-neutral-600"
+      className="group/dropdown-trigger flex cursor-pointer items-center gap-1 text-sm text-neutral-600 transition-all hover:text-primary hover:[&_svg]:stroke-primary"
       {...props}
     >
       {children}
