@@ -5,6 +5,7 @@ import MobileAppImg from "../../mobile-app-img"
 import DownloadFromApplestoreButton from "../../download-from-applestore-button"
 import DownloadFromPlaystoreButton from "../../download-from-playstore-button"
 import { FloatingLabelInput } from "@/components/ui/floating-label-input"
+import SearchDoctorByPhoneNumberForm from "@/features/doctor/components/search-doctor-by-phone-number-form"
 
 const BADGES: string[] = ["Top Doctors", "Top Hospitals", "Medical Events"]
 
@@ -26,14 +27,7 @@ export default function DownloadAppBannerSection() {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-4 md:flex-row md:items-center">
-              <FloatingLabelInput
-                label="Mobile Number"
-                labelClassName="bg-[#D2EEE0]"
-                className="flex-1"
-              />
-              <Button>Search Doctors</Button>
-            </div>
+            <SearchDoctorByPhoneNumberForm />
             <div className="flex flex-wrap gap-2.5 font-league-spartan *:flex-1 md:flex-nowrap md:*:flex-0">
               <DownloadFromApplestoreButton />
               <DownloadFromPlaystoreButton />
