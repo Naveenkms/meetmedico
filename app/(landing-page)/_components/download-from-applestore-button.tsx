@@ -5,7 +5,7 @@ export default function DownloadFromApplestoreButton() {
   return (
     <Button
       variant="download-app"
-      className="flex h-10 gap-2 py-[0.40625rem] pl-2 md:pr-1.5 md:w-30"
+      className="flex h-10 gap-2 py-[0.40625rem] pl-2 transition-all hover:opacity-85 md:w-30 md:pr-1.5"
     >
       <Apple />
       <div>

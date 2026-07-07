@@ -37,7 +37,7 @@ export default function Footer() {
             {LINKS.map(({ label, href }, i) => (
               <li
                 key={i}
-                className="basis-1/2 text-xs leading-[1.33333] font-bold text-neutral-600 odd:pr-5 odd:text-right odd:last:text-center md:text-left even:text-left last:text-left md:w-auto md:basis-auto md:text-sm md:leading-[1.28571]"
+                className="basis-1/2 text-xs leading-[1.33333] font-bold text-neutral-600 transition-all last:text-left odd:pr-5 odd:text-right odd:last:text-center even:text-left hover:text-primary md:w-auto md:basis-auto md:text-left md:text-sm md:leading-[1.28571]"
               >
                 <Link href={href}>{label}</Link>
               </li>
@@ -56,7 +56,11 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-5.25">
             {SOCIALS.map(({ icon: Icon, label, href }, i) => (
-              <Link href={href} key={i}>
+              <Link
+                href={href}
+                key={i}
+                className="transition-all hover:scale-110"
+              >
                 <Icon />
                 <span className="sr-only">{label}</span>
               </Link>
