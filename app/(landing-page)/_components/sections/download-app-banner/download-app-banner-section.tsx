@@ -27,7 +27,11 @@ export default function DownloadAppBannerSection() {
               </div>
             </div>
             <div className="flex flex-col gap-4 md:flex-row md:items-center">
-              <FloatingLabelInput label="Mobile Number" className="flex-1" />
+              <FloatingLabelInput
+                label="Mobile Number"
+                labelClassName="bg-[#D2EEE0]"
+                className="flex-1"
+              />
               <Button>Search Doctors</Button>
             </div>
             <div className="flex flex-wrap gap-2.5 font-league-spartan *:flex-1 md:flex-nowrap md:*:flex-0">
