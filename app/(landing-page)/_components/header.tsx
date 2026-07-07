@@ -21,7 +21,6 @@ import { cn } from "@/lib/utils"
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-  console.log("ss", isVisible)
 
   useEffect(() => {
     const handleScroll = () => {

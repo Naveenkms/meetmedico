@@ -57,6 +57,7 @@ function TabsList({
 
 function TabsTrigger({
   className,
+  children,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
   return (
@@ -64,11 +65,13 @@ function TabsTrigger({
       data-slot="tabs-trigger"
       className={cn(
         "data-active:bg-primary/10 data-active:font-bold data-active:text-primary",
-        "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:bg-neutral-50 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}
-    />
+    >
+      {children}
+    </TabsPrimitive.Trigger>
   )
 }
 

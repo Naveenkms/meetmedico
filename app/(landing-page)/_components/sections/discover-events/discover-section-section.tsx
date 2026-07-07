@@ -30,7 +30,7 @@ export default function DiscoverEventsSection() {
               <CarouselContent>
                 <CarouselItem>
                   <DiscoverEventsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/events/event.png"
                     name="International Cardiology Summit 2026"
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
@@ -47,7 +47,7 @@ export default function DiscoverEventsSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <DiscoverEventsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/events/event.png"
                     name="International Cardiology Summit 2026"
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
@@ -64,7 +64,7 @@ export default function DiscoverEventsSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <DiscoverEventsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/events/event.png"
                     name="International Cardiology Summit 2026"
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
@@ -81,7 +81,7 @@ export default function DiscoverEventsSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <DiscoverEventsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/events/event.png"
                     name="International Cardiology Summit 2026"
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"

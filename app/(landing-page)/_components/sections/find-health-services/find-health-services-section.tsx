@@ -29,7 +29,7 @@ export default function FIndHealthServicesSection() {
               <CarouselContent>
                 <CarouselItem>
                   <FindHealthServicesCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/healthcare/secure-hospital-care.png"
                     name="SGK Hospital & Research Centre"
                     designation="Multi-Speciality Hospital"
                     location="Jaipur, Rajasthan,"
@@ -45,7 +45,7 @@ export default function FIndHealthServicesSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <FindHealthServicesCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/healthcare/secure-hospital-care.png"
                     name="SGK Hospital & Research Centre"
                     designation="Multi-Speciality Hospital"
                     location="Jaipur, Rajasthan,"
@@ -61,7 +61,7 @@ export default function FIndHealthServicesSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <FindHealthServicesCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/healthcare/secure-hospital-care.png"
                     name="SGK Hospital & Research Centre"
                     designation="Multi-Speciality Hospital"
                     location="Jaipur, Rajasthan,"
@@ -77,7 +77,7 @@ export default function FIndHealthServicesSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <FindHealthServicesCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/healthcare/secure-hospital-care.png"
                     name="SGK Hospital & Research Centre"
                     designation="Multi-Speciality Hospital"
                     location="Jaipur, Rajasthan,"
@@ -93,7 +93,7 @@ export default function FIndHealthServicesSection() {
                 </CarouselItem>
                 <CarouselItem>
                   <FindHealthServicesCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
+                    imgSrc="/assets/healthcare/secure-hospital-care.png"
                     name="SGK Hospital & Research Centre"
                     designation="Multi-Speciality Hospital"
                     location="Jaipur, Rajasthan,"
