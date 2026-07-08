@@ -28,6 +28,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-destructive: var(--destructive);
   --radius-sm: calc(var(--radius) * 0.5);
   --radius-md: calc(var(--radius) * 0.75);
@@ -46,6 +48,8 @@
   --card: hsla(0, 0%, 100%, 1); /*--white-900 or #FFF*/
   --card-foreground: hsla(180, 11%, 9%, 0.8); /*--Neutral-600*/
   --muted: hsla(180, 11%, 9%, 0.5); /*Neutral-500*/
+  --popover: hsla(0, 0%, 100%, 1); /*--white-900 or #FFF*/
+  --popover-foreground: hsla(180, 11%, 9%, 1); /*--Neutral-900*/
   --destructive: hsla(357, 100%, 45%);
   --border: hsla(180, 11%, 9%, 0.1); /*Neutral-100*/
   --ring: hsla(151, 71%, 39%, 1); /*Primary/600*/
