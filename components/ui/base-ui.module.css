@@ -1,0 +1,22 @@
+.Indicator {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  translate: var(--active-tab-left);
+  width: var(--active-tab-width);
+  height: 100%;
+  transition-property: translate, width;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  border-top: 1px solid oklch(14.5% 0 0deg);
+  border-inline: 1px solid oklch(14.5% 0 0deg);
+  background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid white;
+    border-inline: 1px solid white;
+    background-color: oklch(14.5% 0 0deg);
+  }
+}
