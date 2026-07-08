@@ -4,7 +4,7 @@ import z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 import searchDocotorsFormSchema from "../schema/search-doctors-form-schema"
-import { Field, FieldError, FieldLabel } from "@/components/ui/field"
+import { Field, FieldError } from "@/components/ui/field"
 import { FloatingLabelInput } from "@/components/ui/floating-label-input"
 import { Button } from "@/components/ui/button"
 import LocationIcon from "@/components/icons/location"
@@ -34,7 +34,7 @@ export default function SearchDoctorsForm() {
         render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
             <div className="relative">
-              <LocationIcon className="absolute left-3 top-3.25" />
+              <LocationIcon className="absolute top-3.25 left-3" />
               <FloatingLabelInput
                 label="Country / City"
                 {...field}
