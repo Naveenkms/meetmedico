@@ -10,6 +10,7 @@ export default function Apple({
       fill="none"
       viewBox="0 0 20 24"
       className={cn("h-6 w-5", className)}
+      {...props}
     >
       <path
         fill="#fff"

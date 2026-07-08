@@ -12,6 +12,7 @@ export default function Location({
       fill="none"
       viewBox="0 0 16 16"
       className={cn("stroke-primary", className)}
+      {...props}
     >
       <path
         strokeOpacity="0.8"

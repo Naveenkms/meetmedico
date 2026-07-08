@@ -1,10 +1,8 @@
 import SectionContainer from "../../section-container"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import MobileAppImg from "../../mobile-app-img"
 import DownloadFromApplestoreButton from "../../download-from-applestore-button"
 import DownloadFromPlaystoreButton from "../../download-from-playstore-button"
-import { FloatingLabelInput } from "@/components/ui/floating-label-input"
 import SearchDoctorByPhoneNumberForm from "@/features/doctor/components/search-doctor-by-phone-number-form"
 
 const BADGES: string[] = ["Top Doctors", "Top Hospitals", "Medical Events"]

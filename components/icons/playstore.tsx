@@ -10,6 +10,7 @@ export default function Playstore({
       fill="none"
       viewBox="0 0 21 24"
       className={cn("h-6 w-5.25", className)}
+      {...props}
     >
       <path
         fill="#EA4335"
