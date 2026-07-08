@@ -1,7 +1,15 @@
 import { Badge } from "@/components/ui/badge"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  TabsIndicator,
+} from "@/components/ui/base-ui-tabs"
 import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
+// import style from "@/components/ui/base-ui.module.css"
+// import { Tabs as BaseUiTabs, TabsIndicator } from '@base-ui/react/tabs';
 
 export default function Banner() {
   return (
@@ -26,6 +34,8 @@ export default function Banner() {
             <TabsTrigger value="professionals">Professionals</TabsTrigger>
             <TabsTrigger value="health-services">Health Services</TabsTrigger>
             <TabsTrigger value="events">Events</TabsTrigger>
+            <TabsIndicator />
+            {/* <BaseUiTabs.Indicator className={style.Indicator}/> */}
           </TabsList>
           <TabsContent value="professionals">
             <Tabs defaultValue="doctors">
@@ -36,6 +46,7 @@ export default function Banner() {
                 <TabsTrigger value="lab-technicians">
                   Lab Technicians
                 </TabsTrigger>
+                <TabsIndicator />
               </TabsList>
               <TabsContent value="doctors">
                 <SearchDoctorsForm />

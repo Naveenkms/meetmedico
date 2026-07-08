@@ -3,6 +3,8 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Tabs as TabsPrimitive } from "radix-ui"
+import { motion } from "motion/react"
+
 import { cn } from "@/lib/utils"
 
 function Tabs({
@@ -24,7 +26,7 @@ function Tabs({
 }
 
 const tabsListVariants = cva(
-  "group/tabs-list peer inline-flex max-md:[&::-webkit-scrollbar]:hidden max-md:[scrollbar-width:none] items-center overflow-x-auto border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col md:text-sm",
+  "group/tabs-list peer inline-flex items-center overflow-x-auto border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col max-md:[scrollbar-width:none] md:text-sm max-md:[&::-webkit-scrollbar]:hidden",
   {
     variants: {
       variant: {
@@ -60,18 +62,32 @@ function TabsTrigger({
   children,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
+  const [active, setActive] = React.useState(true)
+  console.log("d", active)
   return (
-    <TabsPrimitive.Trigger
-      data-slot="tabs-trigger"
-      className={cn(
-        "data-active:bg-primary/10 data-active:font-bold data-active:text-primary",
-        "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:bg-neutral-50 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </TabsPrimitive.Trigger>
+    <>
+      <TabsPrimitive.Trigger
+        data-slot="tabs-trigger"
+        className={cn(
+          "group/tabs-trigger relative data-active:bg-primary/10 data-active:font-bold data-active:text-primary",
+          "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:bg-neutral-50 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+          className
+        )}
+        {...props}
+      >
+        {/* <motion.span
+          layout
+          layoutId="1"
+          className="absolute inset-0 hidden border border-border bg-primary shadow-sm group-data-active/tabs-trigger:inline-block"
+          transition={{
+            type: "spring" as const,
+            duration: 0.25,
+            bounce: 0.05,
+          }}
+        /> */}
+        {children}
+      </TabsPrimitive.Trigger>
+    </>
   )
 }
 
