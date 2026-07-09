@@ -8,6 +8,7 @@ import {
   TabsIndicator,
 } from "@/components/ui/tabs"
 import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
+import { TypographyH1 } from "@/components/ui/typography"
 
 export default function Banner() {
   return (
@@ -16,11 +17,11 @@ export default function Banner() {
         <div className="flex flex-col items-center gap-6">
           <Badge variant="secondary">Certified & Verified</Badge>
           <div className="space-y-3">
-            <h1 className="text-center text-[1.875rem] leading-[1.33333] font-bold tracking-[0%] text-balance md:text-[2.5rem]">
+            <TypographyH1>
               Discover Trusted <br className="md:hidden" />
               <span className="text-primary">Health Services</span>
               <br className="md:hidden" /> Near You
-            </h1>
+            </TypographyH1>
             <p className="text-center text-xs leading-[1.33333] text-neutral-600 md:text-sm md:leading-[1.28571]">
               Find verified doctors, top-tier medical centers, and book seamless
               online appointments tailored to your exact needs.
