@@ -6,10 +6,8 @@ import {
   TabsList,
   TabsTrigger,
   TabsIndicator,
-} from "@/components/ui/base-ui-tabs"
+} from "@/components/ui/tabs"
 import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
-// import style from "@/components/ui/base-ui.module.css"
-// import { Tabs as BaseUiTabs, TabsIndicator } from '@base-ui/react/tabs';
 
 export default function Banner() {
   return (

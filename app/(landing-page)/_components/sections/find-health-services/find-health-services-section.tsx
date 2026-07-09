@@ -1,6 +1,6 @@
 import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   Carousel,
   CarouselContent,
@@ -20,6 +20,7 @@ export default function FIndHealthServicesSection() {
             <TabsTrigger value="hospitals">Hospitals</TabsTrigger>
             <TabsTrigger value="pharmacies">Pharmacies </TabsTrigger>
             <TabsTrigger value="laboratories">Laboratories</TabsTrigger>
+            <TabsIndicator />
           </TabsList>
           <TabsContent
             value="hospitals"

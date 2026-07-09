@@ -1,6 +1,12 @@
 import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
 import {
   Carousel,
   CarouselContent,
@@ -21,6 +27,7 @@ export default function DiscoverEventsSection() {
           <TabsList className="md:self-center">
             <TabsTrigger value="ongoing">Ongoing</TabsTrigger>
             <TabsTrigger value="upcoming">Upcoming </TabsTrigger>
+            <TabsIndicator />
           </TabsList>
           <TabsContent
             value="ongoing"

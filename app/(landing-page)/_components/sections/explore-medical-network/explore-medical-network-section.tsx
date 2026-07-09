@@ -1,6 +1,6 @@
 import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   Carousel,
   CarouselContent,
@@ -29,10 +29,11 @@ export default function ExploreMedicalNetworkSection() {
               By Healthcare Services
             </TabsTrigger>
             <TabsTrigger value="by-symptom">By Symptom</TabsTrigger>
+            <TabsIndicator />
           </TabsList>
           <TabsContent
             value="by-specialist-professionals"
-            className="peer-data-[variant=default]:pt-8 md:peer-data-[variant=default]:pt-8 "
+            className="peer-data-[variant=default]:pt-8 md:peer-data-[variant=default]:pt-8"
           >
             <Carousel className="flex flex-col gap-8">
               <CarouselContent className="-ml-10">

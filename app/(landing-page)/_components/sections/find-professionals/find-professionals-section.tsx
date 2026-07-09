@@ -1,6 +1,12 @@
 import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  TabsIndicator,
+} from "@/components/ui/tabs"
 import {
   Carousel,
   CarouselContent,
@@ -21,6 +27,7 @@ export default function FindProfessionalsSection() {
             <TabsTrigger value="therapists">Therapists </TabsTrigger>
             <TabsTrigger value="pharmacists">Pharmacists</TabsTrigger>
             <TabsTrigger value="lab-technicians">Lab Technicians</TabsTrigger>
+            <TabsIndicator />
           </TabsList>
           <TabsContent
             value="doctors"

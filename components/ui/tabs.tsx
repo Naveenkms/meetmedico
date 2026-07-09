@@ -1,9 +1,7 @@
 "use client"
 
-import * as React from "react"
+import { Tabs as TabsPrimitive } from "@base-ui/react/tabs"
 import { cva, type VariantProps } from "class-variance-authority"
-import { Tabs as TabsPrimitive } from "radix-ui"
-import { motion } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -11,7 +9,7 @@ function Tabs({
   className,
   orientation = "horizontal",
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.Root>) {
+}: TabsPrimitive.Root.Props) {
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
@@ -26,7 +24,7 @@ function Tabs({
 }
 
 const tabsListVariants = cva(
-  "group/tabs-list peer inline-flex items-center overflow-x-auto border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col max-md:[scrollbar-width:none] md:text-sm max-md:[&::-webkit-scrollbar]:hidden",
+  "group/tabs-list peer relative z-0 inline-flex items-center overflow-x-auto border text-xs group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col max-md:[scrollbar-width:none] md:text-sm max-md:[&::-webkit-scrollbar]:hidden",
   {
     variants: {
       variant: {
@@ -45,8 +43,7 @@ function TabsList({
   className,
   variant = "default",
   ...props
-}: React.ComponentProps<typeof TabsPrimitive.List> &
-  VariantProps<typeof tabsListVariants>) {
+}: TabsPrimitive.List.Props & VariantProps<typeof tabsListVariants>) {
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
@@ -57,46 +54,41 @@ function TabsList({
   )
 }
 
-function TabsTrigger({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
-  const [active, setActive] = React.useState(true)
-  console.log("d", active)
+function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
   return (
-    <>
-      <TabsPrimitive.Trigger
-        data-slot="tabs-trigger"
-        className={cn(
-          "group/tabs-trigger relative data-active:bg-primary/10 data-active:font-bold data-active:text-primary",
-          "relative inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-primary/50 group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:bg-neutral-50 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 group-data-[variant=line]/tabs-list:data-active:border-b-2 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-          className
-        )}
-        {...props}
-      >
-        {/* <motion.span
-          layout
-          layoutId="1"
-          className="absolute inset-0 hidden border border-border bg-primary shadow-sm group-data-active/tabs-trigger:inline-block"
-          transition={{
-            type: "spring" as const,
-            duration: 0.25,
-            bounce: 0.05,
-          }}
-        /> */}
-        {children}
-      </TabsPrimitive.Trigger>
-    </>
+    <TabsPrimitive.Tab
+      data-slot="tabs-trigger"
+      className={cn(
+        "group/tabs-trigger data-active:font-bold data-active:text-primary",
+        "inline-flex h-full flex-1 items-center justify-center px-2 py-1.5 whitespace-nowrap transition-all group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 md:py-1.25 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        className
+      )}
+      {...props}
+    />
   )
 }
 
-function TabsContent({
-  className,
-  ...props
-}: React.ComponentProps<typeof TabsPrimitive.Content>) {
+function TabsIndicator({ className, ...props }: TabsPrimitive.Indicator.Props) {
   return (
-    <TabsPrimitive.Content
+    <TabsPrimitive.Indicator
+      data-slot="tabs-indicator"
+      style={{
+        width: "var(--active-tab-width)",
+        height: "var(--active-tab-height)",
+        transform: "translateX(var(--active-tab-left))",
+      }}
+      className={cn(
+        "absolute top-0 left-0 box-border h-full bg-primary/10 transition-[transform,width] duration-150 ease-in-out group-data-[variant=default]/tabs-list:top-1/2 group-data-[variant=default]/tabs-list:-translate-y-1/2 group-data-[variant=default]/tabs-list:rounded-sm group-data-[variant=line]/tabs-list:border-b-2 group-data-[variant=line]/tabs-list:border-primary/50",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function TabsContent({ className, ...props }: TabsPrimitive.Panel.Props) {
+  return (
+    <TabsPrimitive.Panel
       data-slot="tabs-content"
       className={cn(
         "peer-data-[variant=line]:border-neutral-5 flex-1 outline-none peer-data-[variant=default]:pt-8 peer-data-[variant=line]:rounded-b-lg peer-data-[variant=line]:border-x peer-data-[variant=line]:border-b peer-data-[variant=line]:bg-background peer-data-[variant=line]:p-4 md:peer-data-[variant=default]:pt-6 md:peer-data-[variant=line]:p-6",
@@ -106,4 +98,12 @@ function TabsContent({
     />
   )
 }
-export { Tabs, TabsList, TabsTrigger, TabsContent, tabsListVariants }
+
+export {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsIndicator,
+  TabsContent,
+  tabsListVariants,
+}

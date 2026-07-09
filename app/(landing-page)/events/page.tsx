@@ -1,4 +1,10 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  TabsIndicator,
+} from "@/components/ui/tabs"
 import SectionContainer from "../_components/section-container"
 import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
 
@@ -21,6 +27,7 @@ export default function Banner() {
                 <TabsTrigger value="lab-technicians">
                   Lab Technicians
                 </TabsTrigger>
+                <TabsIndicator />
               </TabsList>
               <TabsContent value="doctors">
                 <SearchDoctorsForm />
