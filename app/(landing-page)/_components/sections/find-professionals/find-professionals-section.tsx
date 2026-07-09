@@ -42,14 +42,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Doctors
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Doctors</ActionButton>}
                   />
                 </CarouselItem>
                 <CarouselItem>
@@ -59,14 +52,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Doctors
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Doctors</ActionButton>}
                   />
                 </CarouselItem>{" "}
                 <CarouselItem>
@@ -76,14 +62,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Doctors
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Doctors</ActionButton>}
                   />
                 </CarouselItem>{" "}
                 <CarouselItem>
@@ -93,14 +72,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Profile
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Doctors</ActionButton>}
                   />
                 </CarouselItem>
               </CarouselContent>
@@ -128,5 +100,16 @@ export default function FindProfessionalsSection() {
         </Tabs>
       </SectionContainer>
     </section>
+  )
+}
+
+function ActionButton({ children }: { children: React.ReactNode }) {
+  return (
+    <Button
+      variant="secondary"
+      className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
+    >
+      {children}
+    </Button>
   )
 }
