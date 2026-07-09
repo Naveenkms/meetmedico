@@ -26,14 +26,7 @@ export default function FindDoctorsSection() {
                 icon={Stomach}
                 title="Stomach & Digestion"
                 description="32+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
             <CarouselItem className="">
@@ -41,14 +34,7 @@ export default function FindDoctorsSection() {
                 icon={Heart}
                 title="Cardiac Care"
                 description="9+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
             <CarouselItem className="">
@@ -56,14 +42,7 @@ export default function FindDoctorsSection() {
                 icon={Kidney}
                 title="Urology"
                 description="3+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
             <CarouselItem className="">
@@ -71,14 +50,7 @@ export default function FindDoctorsSection() {
                 icon={Shield}
                 title="Cold & Immunity"
                 description="96+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
             <CarouselItem className="">
@@ -86,14 +58,7 @@ export default function FindDoctorsSection() {
                 icon={Psychiatry}
                 title="Psychiatry"
                 description="2+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
             <CarouselItem className="">
@@ -101,14 +66,7 @@ export default function FindDoctorsSection() {
                 icon={Kidney}
                 title="Stomach & Digestion"
                 description="32+ Doctors"
-                actionButton={
-                  <Button
-                    variant="secondary"
-                    className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                  >
-                    View Doctors
-                  </Button>
-                }
+                actionButton={<ActionButton>View Doctors</ActionButton>}
               />
             </CarouselItem>
           </CarouselContent>
@@ -118,5 +76,16 @@ export default function FindDoctorsSection() {
         </Carousel>
       </SectionContainer>
     </section>
+  )
+}
+
+function ActionButton({ children }: { children: React.ReactNode }) {
+  return (
+    <Button
+      variant="secondary"
+      className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] md:h-10.25 md:text-sm md:leading-[1.28571]"
+    >
+      {children}
+    </Button>
   )
 }

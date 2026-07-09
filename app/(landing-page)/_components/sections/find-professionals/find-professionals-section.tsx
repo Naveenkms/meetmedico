@@ -42,7 +42,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Doctors</ActionButton>}
+                    actionButton={<ActionButton>View Profile</ActionButton>}
                   />
                 </CarouselItem>
                 <CarouselItem>
@@ -52,7 +52,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Doctors</ActionButton>}
+                    actionButton={<ActionButton>View Profile</ActionButton>}
                   />
                 </CarouselItem>{" "}
                 <CarouselItem>
@@ -62,7 +62,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Doctors</ActionButton>}
+                    actionButton={<ActionButton>View Profile</ActionButton>}
                   />
                 </CarouselItem>{" "}
                 <CarouselItem>
@@ -72,7 +72,7 @@ export default function FindProfessionalsSection() {
                     designation="Obstetrics abd Gynaecology"
                     location="Bengaluru, Karnataka"
                     tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Doctors</ActionButton>}
+                    actionButton={<ActionButton>View Profile</ActionButton>}
                   />
                 </CarouselItem>
               </CarouselContent>
