@@ -34,7 +34,6 @@ export default function Banner() {
             <TabsTrigger value="health-services">Health Services</TabsTrigger>
             <TabsTrigger value="events">Events</TabsTrigger>
             <TabsIndicator />
-            {/* <BaseUiTabs.Indicator className={style.Indicator}/> */}
           </TabsList>
           <TabsContent value="professionals">
             <Tabs defaultValue="doctors">
