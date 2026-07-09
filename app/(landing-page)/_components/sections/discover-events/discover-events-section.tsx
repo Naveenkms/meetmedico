@@ -42,14 +42,7 @@ export default function DiscoverEventsSection() {
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
                     tags={["Category", "Tag"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Details
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Details</ActionButton>}
                   />
                 </CarouselItem>
                 <CarouselItem>
@@ -59,14 +52,7 @@ export default function DiscoverEventsSection() {
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
                     tags={["Category", "Tag"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Details
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Details</ActionButton>}
                   />
                 </CarouselItem>
                 <CarouselItem>
@@ -76,14 +62,7 @@ export default function DiscoverEventsSection() {
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
                     tags={["Category", "Tag"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Details
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Details</ActionButton>}
                   />
                 </CarouselItem>
                 <CarouselItem>
@@ -93,14 +72,7 @@ export default function DiscoverEventsSection() {
                     date="Sep 16, 2026 "
                     location="Bengaluru, Karnataka"
                     tags={["Category", "Tag"]}
-                    actionButton={
-                      <Button
-                        variant="secondary"
-                        className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
-                      >
-                        View Details
-                      </Button>
-                    }
+                    actionButton={<ActionButton>View Details</ActionButton>}
                   />
                 </CarouselItem>
               </CarouselContent>
@@ -116,5 +88,16 @@ export default function DiscoverEventsSection() {
         </Tabs>
       </SectionContainer>
     </section>
+  )
+}
+
+function ActionButton({ children }: { children: React.ReactNode }) {
+  return (
+    <Button
+      variant="secondary"
+      className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
+    >
+      {children}
+    </Button>
   )
 }
