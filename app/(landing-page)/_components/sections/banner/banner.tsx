@@ -13,7 +13,7 @@ import { TypographyH1 } from "@/components/ui/typography"
 export default function Banner() {
   return (
     <section id="banner" className="bg-primary/5">
-      <SectionContainer className="gap-10 py-6 md:max-w-225">
+      <SectionContainer className="gap-10 py-6 md:max-w-225 md:gap-10 md:py-20.5">
         <div className="flex flex-col items-center gap-6">
           <Badge variant="secondary">Certified & Verified</Badge>
           <div className="space-y-3">
@@ -22,7 +22,7 @@ export default function Banner() {
               <span className="text-primary">Health Services</span>
               <br className="md:hidden" /> Near You
             </TypographyH1>
-            <p className="text-center text-xs leading-[1.33333] text-neutral-600 md:text-sm md:leading-[1.28571]">
+            <p className="text-center text-xs leading-[1.33333] text-neutral-600 md:text-sm/4.5">
               Find verified doctors, top-tier medical centers, and book seamless
               online appointments tailored to your exact needs.
             </p>

@@ -15,7 +15,7 @@ function Tabs({
       data-slot="tabs"
       data-orientation={orientation}
       className={cn(
-        "group/tabs flex w-full has-group-data-[variant=line]/tabs-list:shadow-md data-horizontal:flex-col",
+        "group/tabs flex w-full has-group-data-[variant=line]/tabs-list:shadow-md has-group-data-[variant=line]/tabs-list:rounded-lg data-horizontal:flex-col",
         className
       )}
       {...props}
