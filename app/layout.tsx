@@ -5,7 +5,7 @@ import "./globals.css"
 import { cn } from "@/lib/utils"
 
 const beVietnamPro = Be_Vietnam_Pro({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: "normal",
   subsets: ["latin", "latin-ext", "vietnamese"],
   variable: "--font-be-vietnam-pro",
