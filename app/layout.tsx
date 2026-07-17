@@ -1,4 +1,5 @@
 import { Be_Vietnam_Pro, League_Spartan } from "next/font/google"
+import { Metadata } from "next"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
@@ -14,6 +15,11 @@ const leagueSpartan = League_Spartan({
   weight: ["400", "500"],
   variable: "--font-league-spartan",
 })
+
+export const metadata: Metadata = {
+  title: "Meetmedico",
+  description: "Discover Trusted Health Services Near You",
+}
 
 export default function RootLayout({
   children,
@@ -31,7 +37,9 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body className="bg-background text-foreground border-box">{children}</body>
+      <body className="border-box bg-background text-foreground">
+        {children}
+      </body>
     </html>
   )
 }
