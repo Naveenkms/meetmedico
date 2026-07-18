@@ -21,14 +21,18 @@ function ScrollHideHeader({
   return (
     <motion.header
       className={cn(
-        "sticky top-0 left-0 z-50 flex h-14 w-full items-center md:border-b border-neutral-50 bg-primary/5 px-4 py-2 backdrop-blur-[44px] md:h-15 md:bg-white-900/80 md:py-3",
+        "sticky top-0 left-0 z-50 flex h-14 w-full items-center border-neutral-50 bg-primary/5 px-4 py-2 backdrop-blur-[44px] md:h-15 md:border-b md:bg-white-900/80 md:py-3",
         className
       )}
+      initial={{
+        y: "-100%",
+      }}
       animate={{
         y: scrollDirection === "up" ? 0 : "-100%",
         opacity: scrollDirection === "up" ? 1 : 0,
       }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+
       {...props}
     />
   )
