@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
-import NavContainer from "./nav-container"
 import Profile from "./profile"
 import LogoMinimised from "@/components/logo-minimised"
 import { Button } from "@/components/ui/button"
@@ -16,8 +16,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { usePathname } from "next/navigation"
 import { ScrollHideHeader } from "@/components/ui/scroll-hide-header"
+import { Container } from "@/components/ui/container"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -64,7 +64,7 @@ export default function Header() {
 
   return (
     <ScrollHideHeader>
-      <NavContainer>
+      <Container className="gap-x-7">
         <div className="hidden items-center md:flex md:basis-[66.66%] md:*:basis-1/2">
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
@@ -135,7 +135,7 @@ export default function Header() {
           <LogoMinimised className="md:hidden" />
         </Link>
         <Profile />
-      </NavContainer>
+      </Container>
     </ScrollHideHeader>
   )
 }
