@@ -12,44 +12,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
+import NAVIGATION_MENU_CONTENT from "@/app/contents/navigation-menu-content"
+import PAGE_LINKS from "@/app/contents/page-links"
 
 export default function DesktopHeaderNavMenu({
   className,
@@ -69,38 +33,42 @@ export default function DesktopHeaderNavMenu({
             active={isActive("/")}
             className={navigationMenuTriggerStyle()}
           >
-            <Link href="/">Home</Link>
+            <Link href={PAGE_LINKS.home}>Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Professionals</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-96">
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built with Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+            <ul className="w-120">
+              {NAVIGATION_MENU_CONTENT.professionals.map(
+                ({ title, description, href, icon }) => (
+                  <ListItem
+                    key={title}
+                    href={href}
+                    title={title}
+                    description={description}
+                    icon={icon}
+                  />
+                )
+              )}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:flex">
           <NavigationMenuTrigger>Health Services</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
+            <ul className="w-150">
+              {NAVIGATION_MENU_CONTENT.healthServices.map(
+                ({ title, description, href, icon }) => (
+                  <ListItem
+                    key={title}
+                    title={title}
+                    href={href}
+                    description={description}
+                    icon={icon}
+                  />
+                )
+              )}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -120,17 +88,27 @@ export default function DesktopHeaderNavMenu({
 
 function ListItem({
   title,
-  children,
+  description,
   href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  icon: Icon,
+}: {
+  title: string
+  description: string
+  href: string
+  icon: React.ElementType
+}) {
   return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
+    <li>
+      <NavigationMenuLink asChild className="group">
         <Link href={href}>
-          <div className="flex flex-col gap-1 text-sm">
-            <div className="leading-none font-medium">{title}</div>
-            <div className="text-muted-foreground line-clamp-2">{children}</div>
+          <div className="flex items-center gap-2 p-2.5">
+            <Icon className="size-6 text-neutral-500 group-hover:text-primary" />
+            <div className="flex flex-col gap-1">
+              <div className="leading-none font-medium text-base group-hover:text-primary">
+                {title}
+              </div>
+              <div className="line-clamp-2 text-neutral-500">{description}</div>
+            </div>
           </div>
         </Link>
       </NavigationMenuLink>
