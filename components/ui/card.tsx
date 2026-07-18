@@ -24,7 +24,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-header"
-      className={cn("group/card-header p-4 shadow-md", className)}
+      className={cn("group/card-header p-3.75 shadow-md", className)}
       {...props}
     />
   )
@@ -44,10 +44,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-description"
-      className={cn(
-        "text-sm leading-[1.28] text-muted",
-        className
-      )}
+      className={cn("text-xs/4 text-muted md:text-sm/4.5", className)}
       {...props}
     />
   )

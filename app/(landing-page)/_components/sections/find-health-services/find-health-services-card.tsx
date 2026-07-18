@@ -22,14 +22,14 @@ export default function FindHealthServicesCard({
         </div>
         <div className="space-y-4">
           <div className="space-y-1">
-            <h3 className="text-base leading-normal font-semibold text-foreground md:leading-tight">
+            <h3 className="text-base/6 font-semibold text-foreground">
               {name}
             </h3>
-            <p className="text-xs leading-[1.33333] text-neutral-500 md:text-sm md:leading-[1.14285]">
+            <p className="text-xs/4.5 text-neutral-500 md:text-sm/4.5">
               {designation}
             </p>
           </div>
-          <div className="md:text:sm text-xs leading-[1.33333] text-card-foreground md:leading-[1.2857]">
+          <div className="text-xs/4 text-card-foreground md:text-sm/4.5">
             {location}
           </div>
         </div>

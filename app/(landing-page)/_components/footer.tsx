@@ -37,7 +37,7 @@ export default function Footer() {
             {LINKS.map(({ label, href }, i) => (
               <li
                 key={i}
-                className="basis-1/2 text-xs leading-[1.33333] font-bold text-neutral-600 transition-all last:text-left odd:pr-5 odd:text-right odd:last:text-center even:text-left hover:text-primary md:w-auto md:basis-auto md:text-left md:text-sm md:leading-[1.28571]"
+                className="basis-1/2 text-xs/4 font-bold text-neutral-600 transition-all last:text-left odd:pr-5 odd:text-right odd:last:text-center even:text-left hover:text-primary md:w-auto md:basis-auto md:text-left md:text-sm/4.5 md:odd:pr-0"
               >
                 <Link href={href}>{label}</Link>
               </li>
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
         <div className="h-px bg-border" />
         <div className="flex flex-col items-center justify-center gap-12.5 text-center md:flex-row md:items-start md:justify-between md:text-left">
-          <div className="space-y-5 text-xs leading-[1.33333] text-neutral-600 md:text-sm md:leading-[1.28571]">
+          <div className="space-y-5 text-xs/4 text-neutral-600 md:text-sm/4.5">
             <p>
               © 2026 MeetMedico Inc. All clinical reference guidelines are
               peer-reviewed. Emergency cases must contact local emergency

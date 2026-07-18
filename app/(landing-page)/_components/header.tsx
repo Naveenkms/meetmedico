@@ -127,7 +127,7 @@ export default function Header() {
         </div>
         <Button
           variant="outline"
-          className="rounded-lg bg-inherit p-3 md:hidden"
+          className="rounded-lg bg-inherit p-2.75 md:hidden"
         >
           <Hamburger />
         </Button>

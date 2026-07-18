@@ -10,7 +10,7 @@ import {
 import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
 import { TypographyH1 } from "@/components/ui/typography"
 
-export default function Banner() {
+export default function BannerSection() {
   return (
     <section id="banner" className="bg-primary/5">
       <SectionContainer className="gap-10 py-6 md:max-w-225 md:gap-10 md:py-20.5">
@@ -22,7 +22,7 @@ export default function Banner() {
               <span className="text-primary">Health Services</span>
               <br className="md:hidden" /> Near You
             </TypographyH1>
-            <p className="text-center text-xs leading-[1.33333] text-neutral-600 md:text-sm/4.5">
+            <p className="text-center text-xs/4 text-neutral-600 md:text-sm/4.5">
               Find verified doctors, top-tier medical centers, and book seamless
               online appointments tailored to your exact needs.
             </p>
@@ -46,12 +46,18 @@ export default function Banner() {
                 </TabsTrigger>
                 <TabsIndicator />
               </TabsList>
-              <TabsContent value="doctors">
+              <TabsContent value="doctors" className="pt-6! md:pt-6.5!">
                 <SearchDoctorsForm />
               </TabsContent>
-              <TabsContent value="therapists">Therapists</TabsContent>
-              <TabsContent value="pharmacists">Pharmacists</TabsContent>
-              <TabsContent value="lab-technicians">Lab Technicians</TabsContent>
+              <TabsContent value="therapists" className="pt-6! md:pt-6.5!">
+                Therapists
+              </TabsContent>
+              <TabsContent value="pharmacists" className="pt-6! md:pt-6.5!">
+                Pharmacists
+              </TabsContent>
+              <TabsContent value="lab-technicians" className="pt-6! md:pt-6.5!">
+                Lab Technicians
+              </TabsContent>
             </Tabs>
           </TabsContent>
           <TabsContent value="health-services">health Services</TabsContent>

@@ -15,7 +15,7 @@ function Tabs({
       data-slot="tabs"
       data-orientation={orientation}
       className={cn(
-        "group/tabs flex w-full has-group-data-[variant=line]/tabs-list:shadow-md has-group-data-[variant=line]/tabs-list:rounded-lg data-horizontal:flex-col",
+        "group/tabs flex w-full has-group-data-[variant=line]/tabs-list:rounded-lg has-group-data-[variant=line]/tabs-list:shadow-md data-horizontal:flex-col",
         className
       )}
       {...props}
@@ -91,7 +91,7 @@ function TabsContent({ className, ...props }: TabsPrimitive.Panel.Props) {
     <TabsPrimitive.Panel
       data-slot="tabs-content"
       className={cn(
-        "peer-data-[variant=line]:border-neutral-5 flex-1 outline-none peer-data-[variant=default]:pt-8 peer-data-[variant=line]:rounded-b-lg peer-data-[variant=line]:border-x peer-data-[variant=line]:border-b peer-data-[variant=line]:bg-background peer-data-[variant=line]:p-4 md:peer-data-[variant=default]:pt-6 md:peer-data-[variant=line]:p-6",
+        "peer-data-[variant=line]:border-neutral-5 flex-1 outline-none peer-data-[variant=default]:pt-8 peer-data-[variant=line]:rounded-b-lg peer-data-[variant=line]:border-x peer-data-[variant=line]:border-b peer-data-[variant=line]:bg-background peer-data-[variant=line]:p-3.75 md:peer-data-[variant=default]:pt-6 md:peer-data-[variant=line]:p-6",
         className
       )}
       {...props}

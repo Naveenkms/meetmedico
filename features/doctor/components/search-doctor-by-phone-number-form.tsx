@@ -52,7 +52,9 @@ export default function SearchDoctorByPhoneNumberForm() {
           </Field>
         )}
       />
-      <Button>Search Doctors</Button>
+      <Button className="h-10.5 text-sm/4.5 md:text-base">
+        Search Doctors
+      </Button>
     </form>
   )
 }

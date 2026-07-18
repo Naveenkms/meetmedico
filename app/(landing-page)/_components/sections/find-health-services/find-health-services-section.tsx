@@ -16,11 +16,13 @@ import {
 import { Button } from "@/components/ui/button"
 import FindHealthServicesCard from "./find-health-services-card"
 
-export default function FIndHealthServicesSection() {
+export default function FindHealthServicesSection() {
   return (
     <section id="find-health-services">
       <SectionContainer className="gap-3 pt-16">
-        <TypographyH2>Find Health Services by Specialities</TypographyH2>
+        <TypographyH2 className="font-semibold">
+          Find Health Services by Specialities
+        </TypographyH2>
         <Tabs defaultValue="hospitals">
           <TabsList className="md:self-center">
             <TabsTrigger value="hospitals">Hospitals</TabsTrigger>
@@ -105,7 +107,7 @@ function ActionButton({ children }: { children: React.ReactNode }) {
   return (
     <Button
       variant="secondary"
-      className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
+      className="h-10.25 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:text-sm md:leading-[1.28571]"
     >
       {children}
     </Button>

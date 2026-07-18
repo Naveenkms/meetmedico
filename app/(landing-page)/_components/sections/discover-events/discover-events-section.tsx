@@ -20,7 +20,7 @@ export default function DiscoverEventsSection() {
   return (
     <section id="discover-events">
       <SectionContainer className="gap-6 pt-6 pb-8 md:gap-8">
-        <TypographyH2>
+        <TypographyH2 className="font-semibold">
           Discover Events for Healthcare Professionals & Patients
         </TypographyH2>
         <Tabs defaultValue="ongoing">
@@ -31,9 +31,9 @@ export default function DiscoverEventsSection() {
           </TabsList>
           <TabsContent
             value="ongoing"
-            className="peer-data-[variant=default]:pt-8"
+            className="peer-data-[variant=default]:pt-8 md:peer-data-[variant=default]:pt-8"
           >
-            <Carousel className="flex w-full flex-col gap-5 md:gap-8">
+            <Carousel className="flex w-full flex-col gap-8">
               <CarouselContent>
                 <CarouselItem>
                   <DiscoverEventsCard
@@ -95,7 +95,7 @@ function ActionButton({ children }: { children: React.ReactNode }) {
   return (
     <Button
       variant="secondary"
-      className="h-9.75 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
+      className="h-10.25 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:h-10.25 md:text-sm md:leading-[1.28571]"
     >
       {children}
     </Button>

@@ -11,10 +11,10 @@ export default function DownloadAppBannerSection() {
   return (
     <section id="download-app-banner">
       <SectionContainer className="pt-0 pb-4">
-        <div className="flex w-full flex-col overflow-hidden rounded-lg border border-primary/20 bg-primary/20 backdrop-blur-[7.5px] md:flex-row md:gap-15">
-          <div className="flex flex-1 flex-col gap-8 p-4 md:py-10 md:pl-10">
+        <div className="flex w-full flex-col overflow-hidden rounded-4xl border border-primary/20 bg-primary/20 backdrop-blur-[7.5px] md:flex-row md:gap-15 md:rounded-lg">
+          <div className="flex flex-1 flex-col gap-8 p-4 md:py-9.75 md:pl-9.75">
             <div className="space-y-4">
-              <h2 className="text-center text-[1.875rem] leading-[1.3333] font-bold tracking-[0%] md:text-left md:text-[2.5rem]">
+              <h2 className="text-center text-[1.875rem]/10 font-bold tracking-[0%] md:text-left md:text-[2.5rem]/13">
                 Download the MeetMedico app
               </h2>
               <div className="flex gap-3 capitalize">

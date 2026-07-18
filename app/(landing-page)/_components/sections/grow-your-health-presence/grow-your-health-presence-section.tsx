@@ -10,7 +10,10 @@ export default function GrowYourHealthPresenceSection() {
   return (
     <section id="grow-your-healthcare-presence" className="bg-primary/5">
       <SectionContainer>
-        <TypographyH2> Grow Your Healthcare Presence</TypographyH2>
+        <TypographyH2 className="font-semibold">
+          {" "}
+          Grow Your Healthcare Presence
+        </TypographyH2>
         <ul className="flex w-full flex-col gap-3 md:flex-row md:items-stretch md:gap-8 [&>li]:flex-1">
           <li>
             <GrowYourHealthPresenceCard
@@ -18,7 +21,11 @@ export default function GrowYourHealthPresenceSection() {
               title="List Health Services"
               description="List your hospital, pharmacy, or laboratory to reach more
                     patients and grow your visibility."
-              actionButton={<Button size="sm">List Hospital</Button>}
+              actionButton={
+                <Button className="h-8 px-3 py-2 text-xs md:h-8.5 md:text-sm">
+                  List Hospital
+                </Button>
+              }
             />
           </li>
           <li>
@@ -27,7 +34,11 @@ export default function GrowYourHealthPresenceSection() {
               title="List Medical Events"
               description="Publish medical events, manage registrations, and reach
                     healthcare professionals worldwide."
-              actionButton={<Button size="sm">Create Event</Button>}
+              actionButton={
+                <Button className="h-8 px-3 py-2 text-xs md:h-8.5 md:text-sm">
+                  Create Event
+                </Button>
+              }
             />
           </li>
           <li>
@@ -37,7 +48,11 @@ export default function GrowYourHealthPresenceSection() {
               description="Join as a doctor, therapist, pharmacist, or lab technician
                     to connect, collaborate, and grow your professional
                     presence."
-              actionButton={<Button size="sm">Register</Button>}
+              actionButton={
+                <Button className="h-8 px-3 py-2 text-xs md:h-8.5 md:text-sm">
+                  Register
+                </Button>
+              }
             />
           </li>
         </ul>

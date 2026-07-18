@@ -22,7 +22,7 @@ function ExploreMedicalNetworkCardHeader({
   return (
     <h4
       className={cn(
-        "text-sm leading-[1.66] font-semibold text-primary md:text-base",
+        "text-sm/4.5 font-semibold text-primary md:text-base",
         className
       )}
       {...props}
@@ -52,7 +52,7 @@ function ExploreMedicalNetworkCardLink({
   return (
     <Link
       className={cn(
-        "text-xs leading-[1.28571] font-medium text-gray-900 transition-all hover:underline md:text-sm",
+        "text-xs/4 font-medium text-gray-900 transition-all hover:underline md:text-sm/4.5",
         className
       )}
       {...props}

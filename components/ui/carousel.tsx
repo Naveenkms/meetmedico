@@ -218,7 +218,7 @@ function CarouselNavigation({ children }: { children: React.ReactNode }) {
       <CarouselPrevious />
       <Button
         variant="outline"
-        className="h-9 px-3 py-2.5 text-xs md:h-9 md:py-2.25 md:text-sm"
+        className="h-9 px-2.75 py-2.5 text-xs md:h-9 md:py-2 md:text-sm/4.5 md:tracking-[0px]"
       >
         {children}
       </Button>

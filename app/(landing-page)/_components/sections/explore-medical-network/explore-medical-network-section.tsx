@@ -1,6 +1,12 @@
 import { TypographyH2 } from "@/components/ui/typography"
 import SectionContainer from "../../section-container"
-import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
 import {
   Carousel,
   CarouselContent,
@@ -18,8 +24,8 @@ import {
 export default function ExploreMedicalNetworkSection() {
   return (
     <section id="explore-the-medical-network">
-      <SectionContainer className="gap-8 py-8">
-        <TypographyH2>Explore the Medical Network</TypographyH2>
+      <SectionContainer className="gap-9.25 pt-9.25 pb-8">
+        <TypographyH2 className="font-semibold">Explore the Medical Network</TypographyH2>
         <Tabs defaultValue="by-specialist-professionals">
           <TabsList className="md:self-center">
             <TabsTrigger value="by-specialist-professionals">

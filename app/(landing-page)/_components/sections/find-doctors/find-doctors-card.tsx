@@ -21,10 +21,10 @@ export default function FindDoctorsCard({
     <Card className="w-56">
       <CardHeader className="flex flex-col items-center">
         <Icon className="mb-5" />
-        <CardTitle className="mb-1 text-sm leading-[1.28571] md:text-base md:leading-tight">
+        <CardTitle className="mb-1 text-sm/4.5 md:text-base md:leading-tight">
           {title}
         </CardTitle>
-        <CardDescription className="leading-[1.28571]">
+        <CardDescription>
           {description}
         </CardDescription>
       </CardHeader>
