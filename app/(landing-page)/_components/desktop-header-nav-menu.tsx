@@ -14,15 +14,14 @@ import {
 } from "@/components/ui/navigation-menu"
 import NAVIGATION_MENU_CONTENT from "@/app/contents/navigation-menu-content"
 import PAGE_LINKS from "@/app/contents/page-links"
+import useCheckPageActive from "@/hooks/use-check-page-active"
 
 export default function DesktopHeaderNavMenu({
   className,
 }: {
   className?: string
 }) {
-  const pathName = usePathname()
-  const isActive = (targetPath: string) =>
-    targetPath === "/" ? pathName === "/" : pathName.startsWith(targetPath)
+  const { checkIsPageActive } = useCheckPageActive()
 
   return (
     <NavigationMenu className={cn("hidden lg:flex", className)}>
@@ -30,7 +29,7 @@ export default function DesktopHeaderNavMenu({
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            active={isActive("/")}
+            active={checkIsPageActive(PAGE_LINKS.home)}
             className={navigationMenuTriggerStyle()}
           >
             <Link href={PAGE_LINKS.home}>Home</Link>
@@ -75,10 +74,10 @@ export default function DesktopHeaderNavMenu({
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            active={isActive("/events")}
+            active={checkIsPageActive(PAGE_LINKS.events)}
             className={navigationMenuTriggerStyle()}
           >
-            <Link href="/events">Events</Link>
+            <Link href={PAGE_LINKS.events}>Events</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -104,7 +103,7 @@ function ListItem({
           <div className="flex items-center gap-2 p-2.5">
             <Icon className="size-6 text-neutral-500 group-hover:text-primary" />
             <div className="flex flex-col gap-1">
-              <div className="leading-none font-medium text-base group-hover:text-primary">
+              <div className="text-base leading-none font-medium group-hover:text-primary">
                 {title}
               </div>
               <div className="line-clamp-2 text-neutral-500">{description}</div>

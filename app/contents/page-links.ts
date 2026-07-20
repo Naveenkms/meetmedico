@@ -11,6 +11,7 @@ const PAGE_LINKS = {
     pharmacies: "/health-services/pharmacies",
     laborataries: "/health-servies/laborataries",
   },
+  events: "/events",
 }
 
 export default PAGE_LINKS
