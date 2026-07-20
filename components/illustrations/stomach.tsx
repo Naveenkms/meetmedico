@@ -1,11 +1,27 @@
-export default function Stomach({ ...props }: React.ComponentProps<"svg">) {
+"use client"
+import { motion, Variants } from "motion/react"
+
+import { motionVariantForSvg } from "@/lib/utils"
+
+const bubbleVariants: Variants = {
+  "animate-icon": {
+    x: [0, 7, 15],
+    y: [0, -4, -8],
+    transition: { repeat: Infinity, duration: 2 },
+  },
+}
+
+export default function Stomach({
+  ...props
+}: React.ComponentProps<typeof motion.svg>) {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="60"
       height="60"
       fill="none"
       viewBox="0 0 60 60"
+      variants={motionVariantForSvg}
       {...props}
     >
       <g clipPath="url(#clip0_0_691)">
@@ -25,20 +41,24 @@ export default function Stomach({ ...props }: React.ComponentProps<"svg">) {
           fill="#AAD880"
           d="M36.968 33.29a5.12 5.12 0 0 1-5.896-2.69c-6.335 6.614-21.028 1.098-26.902 8.77-6.836 8.926-2.409 16.776 3.53 20.404a1.555 1.555 0 0 0 1.984-.317l2.47-2.858c.59-.684.475-1.72-.244-2.268-1.21-.922-2.778-2.596-3.007-5.177-.666-5.388 4.228-8.859 11.713-9.089 6.355-.195 13.492-2.2 16.352-6.774"
         ></path>
-        <path
+        <motion.path
+          initial={{ x: 0, y: 0 }}
+          variants={bubbleVariants}
           fill="#D3F39F"
           d="M39.403 43.499a2.309 2.309 0 1 0 0-4.618 2.309 2.309 0 0 0 0 4.618"
-        ></path>
-        <path
+        ></motion.path>
+        <motion.path
+          initial={{ x: 0, y: 0 }}
+          variants={bubbleVariants}
           fill="#AAD880"
           d="M27.92 45.491a3.35 3.35 0 1 0 0-6.7 3.35 3.35 0 0 0 0 6.7"
-        ></path>
+        ></motion.path>
       </g>
       <defs>
         <clipPath id="clip0_0_691">
           <path fill="#fff" d="M0 0h60v60H0z"></path>
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   )
 }

@@ -1,11 +1,31 @@
-export default function Psychiatry({ ...props }: React.ComponentProps<"svg">) {
+"use client"
+import { motion, Variants } from "motion/react"
+
+import { motionVariantForSvg } from "@/lib/utils"
+
+const pathVariants: Variants = {
+  "animate-icon": (index: number) => ({
+    scale: [1, 1.5],
+    transition: {
+      repeat: Infinity,
+      delay: index * 0.3,
+      duration: 0.3,
+      repeatType: "reverse",
+    },
+  }),
+}
+
+export default function Psychiatry({
+  ...props
+}: React.ComponentProps<typeof motion.svg>) {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="60"
       height="60"
       fill="none"
       viewBox="0 0 60 60"
+      variants={motionVariantForSvg}
       {...props}
     >
       <g clipPath="url(#clip0_0_843)">
@@ -37,24 +57,32 @@ export default function Psychiatry({ ...props }: React.ComponentProps<"svg">) {
           fill="#FE76A8"
           d="M7.27 10.115a3.246 3.246 0 1 0 0-6.492 3.246 3.246 0 0 0 0 6.492"
         ></path>
-        <path
+        <motion.path
+          variants={pathVariants}
+          custom={1}
           fill="#FE76A8"
           d="M7.27 10.115a3.246 3.246 0 1 0 0-6.492 3.246 3.246 0 0 0 0 6.492"
-        ></path>
-        <path
+        ></motion.path>
+        <motion.path
+          variants={pathVariants}
+          custom={2}
+
           fill="#8AC9FE"
           d="M16.962 18.853a1.962 1.962 0 1 0 0-3.923 1.962 1.962 0 0 0 0 3.923"
-        ></path>
-        <path
+        ></motion.path>
+        <motion.path
+          variants={pathVariants}
+          custom={3}
+
           fill="#FE76A8"
           d="M26.407 11.722a1.962 1.962 0 1 0 0-3.923 1.962 1.962 0 0 0 0 3.923"
-        ></path>
+        ></motion.path>
       </g>
       <defs>
         <clipPath id="clip0_0_843">
           <path fill="#fff" d="M0 0h60v60H0z"></path>
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   )
 }

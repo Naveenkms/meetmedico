@@ -63,7 +63,7 @@ export default function FindDoctorsSection() {
             </CarouselItem>
             <CarouselItem className="">
               <FindDoctorsCard
-                icon={Kidney}
+                icon={Stomach}
                 title="Stomach & Digestion"
                 description="32+ Doctors"
                 actionButton={<ActionButton>View Doctors</ActionButton>}

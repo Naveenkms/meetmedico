@@ -1,11 +1,19 @@
-export default function Kidney({ ...props }: React.ComponentProps<"svg">) {
+"use client"
+import { motion } from "motion/react"
+
+import { motionVariantForSvg } from "@/lib/utils"
+
+export default function Kidney({
+  ...props
+}: React.ComponentProps<typeof motion.svg>) {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       width="60"
       height="60"
       fill="none"
       viewBox="0 0 60 60"
+      variants={motionVariantForSvg}
       {...props}
     >
       <g clipPath="url(#clip0_0_732)">
@@ -51,6 +59,6 @@ export default function Kidney({ ...props }: React.ComponentProps<"svg">) {
           <path fill="#fff" d="M0 0h60v60H0z"></path>
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   )
 }
