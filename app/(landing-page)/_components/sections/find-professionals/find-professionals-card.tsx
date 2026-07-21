@@ -26,15 +26,15 @@ export default function FindProfessionalsCard({
         </div>
         <div className="space-y-[1.15625rem] md:space-y-4">
           <div className="space-y-1">
-            <h3 className="text-base leading-normal font-semibold text-foreground md:leading-tight">
+            <h3 className="text-base leading-normal font-semibold text-foreground md:leading-tight line-clamp-1">
               {name}
             </h3>
-            <p className="text-xs/4.5 text-neutral-500 md:text-sm/4.5">
+            <p className="text-xs/4.5 text-neutral-500 md:text-sm/4.5 line-clamp-1">
               {designation}
             </p>
           </div>
           <div className="space-y-[1.15625rem] md:space-y-4">
-            <div className="text-xs/4 text-card-foreground md:text-sm/4.5">
+            <div className="text-xs/4 text-card-foreground md:text-sm/4.5 line-clamp-1">
               {location}
             </div>
             <div className="flex gap-1">

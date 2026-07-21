@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/carousel"
 import FindProfessionalsCard from "./find-professionals-card"
 import { Button } from "@/components/ui/button"
+import { FIND_PROFESSIONALS_SECTION_CONTENT } from "@/contents/find-professionals-section-content"
 
 export default function FindProfessionalsSection() {
   return (
@@ -35,46 +36,20 @@ export default function FindProfessionalsSection() {
           >
             <Carousel className="flex w-full flex-col gap-5 md:gap-8">
               <CarouselContent>
-                <CarouselItem>
-                  <FindProfessionalsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Profile</ActionButton>}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <FindProfessionalsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Profile</ActionButton>}
-                  />
-                </CarouselItem>{" "}
-                <CarouselItem>
-                  <FindProfessionalsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Profile</ActionButton>}
-                  />
-                </CarouselItem>{" "}
-                <CarouselItem>
-                  <FindProfessionalsCard
-                    imgSrc="/assets/professionals/dr- alka-kriplani.png"
-                    name="Dr. Alka Kriplani"
-                    designation="Obstetrics abd Gynaecology"
-                    location="Bengaluru, Karnataka"
-                    tags={["M.B.B.S", "FICOG", "FRCOG"]}
-                    actionButton={<ActionButton>View Profile</ActionButton>}
-                  />
-                </CarouselItem>
+                {FIND_PROFESSIONALS_SECTION_CONTENT.doctors.map(
+                  ({ imgSrc, designation, location, name, tags }, i) => (
+                    <CarouselItem key={i}>
+                      <FindProfessionalsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        designation={designation}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Profile</ActionButton>}
+                      />
+                    </CarouselItem>
+                  )
+                )}
               </CarouselContent>
               <CarouselNavigation>Explore All Doctors</CarouselNavigation>
             </Carousel>
@@ -83,19 +58,73 @@ export default function FindProfessionalsSection() {
             value="therapists"
             className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
           >
-            Therapists
+            <Carousel className="flex w-full flex-col gap-5 md:gap-8">
+              <CarouselContent>
+                {FIND_PROFESSIONALS_SECTION_CONTENT.therapists.map(
+                  ({ imgSrc, designation, location, name, tags }, i) => (
+                    <CarouselItem key={i}>
+                      <FindProfessionalsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        designation={designation}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Profile</ActionButton>}
+                      />
+                    </CarouselItem>
+                  )
+                )}
+              </CarouselContent>
+              <CarouselNavigation>Explore All Therapists</CarouselNavigation>
+            </Carousel>
           </TabsContent>
           <TabsContent
             value="pharmacists"
             className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
           >
-            Pharmacists
+            <Carousel className="flex w-full flex-col gap-5 md:gap-8">
+              <CarouselContent>
+                {FIND_PROFESSIONALS_SECTION_CONTENT.pharmacists.map(
+                  ({ imgSrc, designation, location, name, tags }, i) => (
+                    <CarouselItem key={i}>
+                      <FindProfessionalsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        designation={designation}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Profile</ActionButton>}
+                      />
+                    </CarouselItem>
+                  )
+                )}
+              </CarouselContent>
+              <CarouselNavigation>Explore All Pharmacists</CarouselNavigation>
+            </Carousel>
           </TabsContent>
-          <TabsContent
+            <TabsContent
             value="lab-technicians"
             className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
           >
-            Lab Technicians
+            <Carousel className="flex w-full flex-col gap-5 md:gap-8">
+              <CarouselContent>
+                {FIND_PROFESSIONALS_SECTION_CONTENT.labTechnicians.map(
+                  ({ imgSrc, designation, location, name, tags }, i) => (
+                    <CarouselItem key={i}>
+                      <FindProfessionalsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        designation={designation}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Profile</ActionButton>}
+                      />
+                    </CarouselItem>
+                  )
+                )}
+              </CarouselContent>
+              <CarouselNavigation>Explore All Technicians</CarouselNavigation>
+            </Carousel>
           </TabsContent>
         </Tabs>
       </SectionContainer>
@@ -107,7 +136,7 @@ function ActionButton({ children }: { children: React.ReactNode }) {
   return (
     <Button
       variant="secondary"
-      className="w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary h-10.25 md:text-sm md:leading-[1.28571]"
+      className="h-10.25 w-full rounded-sm px-5 py-3 text-xs leading-[1.3333] text-primary md:text-sm md:leading-[1.28571]"
     >
       {children}
     </Button>
