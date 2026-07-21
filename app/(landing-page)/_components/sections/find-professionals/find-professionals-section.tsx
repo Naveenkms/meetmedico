@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/carousel"
 import FindProfessionalsCard from "./find-professionals-card"
 import { Button } from "@/components/ui/button"
-import { FIND_PROFESSIONALS_SECTION_CONTENT } from "@/contents/find-professionals-section-content"
+import FIND_PROFESSIONALS_SECTION_CONTENT from "@/contents/find-professionals-section-content"
 
 export default function FindProfessionalsSection() {
   return (
@@ -102,7 +102,7 @@ export default function FindProfessionalsSection() {
               <CarouselNavigation>Explore All Pharmacists</CarouselNavigation>
             </Carousel>
           </TabsContent>
-            <TabsContent
+          <TabsContent
             value="lab-technicians"
             className="peer-data-[variant=default]:pt-5 md:peer-data-[variant=default]:pt-8"
           >
