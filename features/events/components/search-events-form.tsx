@@ -1,27 +1,37 @@
 "use client"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm, Controller } from "react-hook-form"
 import z from "zod"
-import { Controller } from "react-hook-form"
 
-import {
-  SearchProfessionalsForm,
-  SearchProfessionalsFormSubmitButton,
-  SearchProfessionalsFormSpecialityInput,
-} from "../../components/search-professionals-form"
-import useFormForSearchProfessionalsForm from "../../hooks/use-form-for-search-professionals-form"
-import searchProfessionalsFormSchema from "../../schema/search-professionals-form-schema"
+import { FloatingLabelInput } from "@/components/ui/floating-label-input"
+import { Button } from "@/components/ui/button"
+import searchEventsFormSchema from "../schema/search-events-form-schema"
 import { Field, FieldError } from "@/components/ui/field"
 import CountryInput from "@/components/country-input"
 
-export default function SearchDoctorsForm() {
-  const form = useFormForSearchProfessionalsForm()
-
-  const onSubmit = (data: z.infer<typeof searchProfessionalsFormSchema>) => {
+export default function SearchEventsForm({
+  eventType,
+}: {
+  eventType: z.infer<typeof searchEventsFormSchema>["eventType"]
+}) {
+  const form = useForm<z.infer<typeof searchEventsFormSchema>>({
+    resolver: zodResolver(searchEventsFormSchema),
+    defaultValues: {
+      eventType,
+      country: "",
+      type: "",
+    },
+    reValidateMode: "onChange",
+  })
+  const onSubmit = (data: z.infer<typeof searchEventsFormSchema>) => {
     alert("You submitted the following values:" + JSON.stringify(data, null, 2))
   }
+
   return (
-    <SearchProfessionalsForm
-      id="search-doctors"
+    <form
+      id="search-events"
       onSubmit={form.handleSubmit(onSubmit)}
+      className="flex flex-col gap-6 md:flex-row md:gap-4"
     >
       <Controller
         name="country"
@@ -39,13 +49,15 @@ export default function SearchDoctorsForm() {
         )}
       />
       <Controller
-        name="speciality"
+        name="type"
         control={form.control}
         render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
-            <SearchProfessionalsFormSpecialityInput
-              label="Specialty  / Diseases"
-              placeholder="eg. Cardiology, Diabetes "
+            <FloatingLabelInput
+              id="event-type"
+              autoComplete="off"
+              label="Event Type"
+              placeholder="eg. Seminar, Webinar"
               aria-invalid={fieldState.invalid}
               {...field}
             />
@@ -54,10 +66,10 @@ export default function SearchDoctorsForm() {
         )}
       />
       <Field>
-        <SearchProfessionalsFormSubmitButton form="search-doctors">
-          Search Doctors
-        </SearchProfessionalsFormSubmitButton>
+        <Button className="h-10.5 text-sm md:text-base" form="search-events">
+          Search Events
+        </Button>
       </Field>
-    </SearchProfessionalsForm>
+    </form>
   )
 }

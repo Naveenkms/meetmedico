@@ -8,10 +8,9 @@ import {
   TabsIndicator,
 } from "@/components/ui/tabs"
 import { TypographyH1 } from "@/components/ui/typography"
-import SearchDoctorsForm from "@/features/professionals/doctors/components/search-doctors-form"
-import SearchTherapistssForm from "@/features/professionals/therapists/components/search-therapists-form"
-import SearchPharmacistsForm from "@/features/professionals/pharmacists/components/search-pharmacists.form"
-import SearchLabTechniciansForm from "@/features/professionals/lab-technicians/components/search-pharmacists-form"
+import ProfessionalsTabContent from "./professionals-tab-content"
+import HealthServicesTabContent from "./health-services-tab-content"
+import EvetnsTabContent from "./events-tab-content"
 
 export default function BannerSection() {
   return (
@@ -39,32 +38,14 @@ export default function BannerSection() {
             <TabsIndicator />
           </TabsList>
           <TabsContent value="professionals">
-            <Tabs defaultValue="doctors">
-              <TabsList className="">
-                <TabsTrigger value="doctors">Doctors</TabsTrigger>
-                <TabsTrigger value="therapists">Therapists </TabsTrigger>
-                <TabsTrigger value="pharmacists">Pharmacists</TabsTrigger>
-                <TabsTrigger value="lab-technicians">
-                  Lab Technicians
-                </TabsTrigger>
-                <TabsIndicator />
-              </TabsList>
-              <TabsContent value="doctors" className="pt-6! md:pt-6.5!">
-                <SearchDoctorsForm />
-              </TabsContent>
-              <TabsContent value="therapists" className="pt-6! md:pt-6.5!">
-                <SearchTherapistssForm />
-              </TabsContent>
-              <TabsContent value="pharmacists" className="pt-6! md:pt-6.5!">
-                <SearchPharmacistsForm />
-              </TabsContent>
-              <TabsContent value="lab-technicians" className="pt-6! md:pt-6.5!">
-                <SearchLabTechniciansForm />
-              </TabsContent>
-            </Tabs>
+            <ProfessionalsTabContent />
           </TabsContent>
-          <TabsContent value="health-services">health Services</TabsContent>
-          <TabsContent value="events">Events</TabsContent>
+          <TabsContent value="health-services">
+            <HealthServicesTabContent />
+          </TabsContent>
+          <TabsContent value="events">
+            <EvetnsTabContent />
+          </TabsContent>
         </Tabs>
       </SectionContainer>
     </section>

@@ -3,14 +3,14 @@ import z from "zod"
 import { Controller } from "react-hook-form"
 
 import {
-  SearchProfessionalsFormCountryInput,
   SearchProfessionalsForm,
   SearchProfessionalsFormSubmitButton,
   SearchProfessionalsFormSpecialityInput,
-} from "../../components/search-professionals-form/search-professionals-form"
+} from "../../components/search-professionals-form"
 import useFormForSearchProfessionalsForm from "../../hooks/use-form-for-search-professionals-form"
 import searchProfessionalsFormSchema from "../../schema/search-professionals-form-schema"
 import { Field, FieldError } from "@/components/ui/field"
+import CountryInput from "@/components/country-input"
 
 export default function SearchPharmacistsForm() {
   const form = useFormForSearchProfessionalsForm()
@@ -28,7 +28,7 @@ export default function SearchPharmacistsForm() {
         control={form.control}
         render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
-            <SearchProfessionalsFormCountryInput
+            <CountryInput
               label="Country / City"
               aria-invalid={fieldState.invalid}
               {...field}
