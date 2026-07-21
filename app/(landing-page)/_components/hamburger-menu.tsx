@@ -12,8 +12,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import NAVIGATION_MENU_CONTENT from "@/app/contents/navigation-menu-content"
-import PAGE_LINKS from "@/app/contents/page-links"
+import NAVIGATION_MENU_CONTENT from "@/contents/navigation-menu-content"
+import PAGE_LINKS from "@/contents/page-links"
 import useCheckPageActive from "@/hooks/use-check-page-active"
 
 export default function HamburgerMenu({ className }: { className?: string }) {
