@@ -23,7 +23,7 @@ export default function FindDoctorsCard({
   actionButton: React.ReactNode
 }) {
   return (
-    <MotionCard whileHover="animate-icon" className="w-56 hover:border-primary">
+    <MotionCard whileHover="animate-icon" className="w-56">
       <CardHeader className="flex flex-col items-center">
         <Icon className="mb-5" />
         <CardTitle className="mb-1 text-sm/4.5 md:text-base md:leading-tight">

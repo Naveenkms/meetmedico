@@ -19,7 +19,7 @@ export default function FindProfessionalsCard({
   actionButton: React.ReactNode
 }) {
   return (
-    <Card className="w-71.25 hover:border-primary">
+    <Card className="w-71.25">
       <CardHeader className="flex flex-col gap-5">
         <div className="relative h-47.5 w-full rounded-lg">
           <Image fill src={imgSrc} alt={name}  />
