@@ -10,7 +10,6 @@ import {
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
   CarouselNavigation,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
@@ -40,9 +39,8 @@ export default function FindHealthServicesSection() {
               <CarouselContent>
                 {FIND_HEALTH_SERVICES_SECTION_CONTENT.hospitals.map(
                   ({ imgSrc, designation, location, name }, i) => (
-                    <FindHealthServicesCarouselItem>
+                    <FindHealthServicesCarouselItem key={i}>
                       <FindHealthServicesCard
-                        key={i}
                         imgSrc={imgSrc}
                         name={name}
                         designation={designation}
@@ -64,9 +62,8 @@ export default function FindHealthServicesSection() {
               <CarouselContent>
                 {FIND_HEALTH_SERVICES_SECTION_CONTENT.pharmacies.map(
                   ({ imgSrc, designation, location, name }, i) => (
-                    <FindHealthServicesCarouselItem>
+                    <FindHealthServicesCarouselItem key={i}>
                       <FindHealthServicesCard
-                        key={i}
                         imgSrc={imgSrc}
                         name={name}
                         designation={designation}
@@ -88,9 +85,8 @@ export default function FindHealthServicesSection() {
               <CarouselContent>
                 {FIND_HEALTH_SERVICES_SECTION_CONTENT.laborataries.map(
                   ({ imgSrc, designation, location, name }, i) => (
-                    <FindHealthServicesCarouselItem>
+                    <FindHealthServicesCarouselItem key={i}>
                       <FindHealthServicesCard
-                        key={i}
                         imgSrc={imgSrc}
                         name={name}
                         designation={designation}

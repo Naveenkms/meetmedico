@@ -10,11 +10,12 @@ import {
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
   CarouselNavigation,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 import DiscoverEventsCard from "./discover-events-card"
+import DISCOVER_EVENTS_SECTION from "@/contents/discover-events-content"
+import DiscoverEventsCarouselItem from "./discover-events-carousel-item"
 
 export default function DiscoverEventsSection() {
   return (
@@ -35,46 +36,20 @@ export default function DiscoverEventsSection() {
           >
             <Carousel className="flex w-full flex-col gap-8">
               <CarouselContent>
-                <CarouselItem>
-                  <DiscoverEventsCard
-                    imgSrc="/assets/events/event.png"
-                    name="International Cardiology Summit 2026"
-                    date="Sep 16, 2026 "
-                    location="Bengaluru, Karnataka"
-                    tags={["Category", "Tag"]}
-                    actionButton={<ActionButton>View Details</ActionButton>}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <DiscoverEventsCard
-                    imgSrc="/assets/events/event.png"
-                    name="International Cardiology Summit 2026"
-                    date="Sep 16, 2026 "
-                    location="Bengaluru, Karnataka"
-                    tags={["Category", "Tag"]}
-                    actionButton={<ActionButton>View Details</ActionButton>}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <DiscoverEventsCard
-                    imgSrc="/assets/events/event.png"
-                    name="International Cardiology Summit 2026"
-                    date="Sep 16, 2026 "
-                    location="Bengaluru, Karnataka"
-                    tags={["Category", "Tag"]}
-                    actionButton={<ActionButton>View Details</ActionButton>}
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <DiscoverEventsCard
-                    imgSrc="/assets/events/event.png"
-                    name="International Cardiology Summit 2026"
-                    date="Sep 16, 2026 "
-                    location="Bengaluru, Karnataka"
-                    tags={["Category", "Tag"]}
-                    actionButton={<ActionButton>View Details</ActionButton>}
-                  />
-                </CarouselItem>
+                {DISCOVER_EVENTS_SECTION.ongoing.map(
+                  ({ name, imgSrc, date, location, tags }, i) => (
+                    <DiscoverEventsCarouselItem key={i}>
+                      <DiscoverEventsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        date={date}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Details</ActionButton>}
+                      />
+                    </DiscoverEventsCarouselItem>
+                  )
+                )}
               </CarouselContent>
               <CarouselNavigation>Explore All Events</CarouselNavigation>
             </Carousel>
@@ -83,7 +58,25 @@ export default function DiscoverEventsSection() {
             value="upcoming"
             className="peer-data-[variant=default]:pt-5"
           >
-            Upcoming
+            <Carousel className="flex w-full flex-col gap-8">
+              <CarouselContent>
+                {DISCOVER_EVENTS_SECTION.upcoming.map(
+                  ({ name, imgSrc, date, location, tags }, i) => (
+                    <DiscoverEventsCarouselItem key={i}>
+                      <DiscoverEventsCard
+                        imgSrc={imgSrc}
+                        name={name}
+                        date={date}
+                        location={location}
+                        tags={tags}
+                        actionButton={<ActionButton>View Details</ActionButton>}
+                      />
+                    </DiscoverEventsCarouselItem>
+                  )
+                )}
+              </CarouselContent>
+              <CarouselNavigation>Explore All Events</CarouselNavigation>
+            </Carousel>
           </TabsContent>
         </Tabs>
       </SectionContainer>

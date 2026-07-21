@@ -19,12 +19,12 @@ export default function DiscoverEventsCard({
   actionButton: React.ReactNode
 }) {
   return (
-    <Card className="w-71.25">
-      <CardHeader className="flex flex-col gap-5">
+    <Card className="w-71.25 flex-1">
+      <CardHeader className="flex flex-1 flex-col gap-5">
         <div className="relative h-47.5 w-full rounded-lg">
           <Image fill src={imgSrc} alt={name} />
         </div>
-        <div className="space-y-4">
+        <div className="flex flex-1 flex-col space-y-4">
           <div className="flex gap-1">
             {tags.map((tag, i) => (
               <Badge key={i} variant="dark">
@@ -32,8 +32,8 @@ export default function DiscoverEventsCard({
               </Badge>
             ))}
           </div>
-          <div className="space-y-1">
-            <h3 className="text-base leading-normal font-semibold text-foreground md:text-base/6">
+          <div className="flex flex-1 flex-col space-y-1">
+            <h3 className="line-clamp-2 flex-1 text-base leading-normal font-semibold text-foreground md:text-base/6">
               {name}
             </h3>
             <p className="text-xs/4.5 text-neutral-500 md:text-sm/4.5">
