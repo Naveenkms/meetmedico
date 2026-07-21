@@ -1,8 +1,8 @@
 import z from "zod"
 
-const searchDocotorsFormSchema = z.object({
+const searchProfessionalsFormSchema = z.object({
   country: z.string().min(1, { error: "" }),
   speciality: z.string().min(1, { error: "" }),
 })
 
-export default searchDocotorsFormSchema
+export default searchProfessionalsFormSchema

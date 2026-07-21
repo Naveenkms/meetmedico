@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import MobileAppImg from "../../mobile-app-img"
 import DownloadFromApplestoreButton from "../../download-from-applestore-button"
 import DownloadFromPlaystoreButton from "../../download-from-playstore-button"
-import SearchDoctorByPhoneNumberForm from "@/features/doctor/components/search-doctor-by-phone-number-form"
+import SearchDoctorByPhoneNumberForm from "@/features/professionals/doctors/components/search-doctor-by-phone-number-form"
 
 const BADGES: string[] = ["Top Doctors", "Top Hospitals", "Medical Events"]
 

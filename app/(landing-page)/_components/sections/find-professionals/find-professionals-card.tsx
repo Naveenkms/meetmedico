@@ -19,10 +19,10 @@ export default function FindProfessionalsCard({
   actionButton: React.ReactNode
 }) {
   return (
-    <Card className="w-71.25">
+    <Card className="w-71.25 hover:border-primary">
       <CardHeader className="flex flex-col gap-5">
         <div className="relative h-47.5 w-full rounded-lg">
-          <Image fill src={imgSrc} alt={name} />
+          <Image fill src={imgSrc} alt={name}  />
         </div>
         <div className="space-y-[1.15625rem] md:space-y-4">
           <div className="space-y-1">
@@ -34,7 +34,7 @@ export default function FindProfessionalsCard({
             </p>
           </div>
           <div className="space-y-[1.15625rem] md:space-y-4">
-            <div className="md:text-sm/4.5 text-xs/4 text-card-foreground">
+            <div className="text-xs/4 text-card-foreground md:text-sm/4.5">
               {location}
             </div>
             <div className="flex gap-1">

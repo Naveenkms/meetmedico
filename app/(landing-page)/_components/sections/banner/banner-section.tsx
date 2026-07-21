@@ -7,8 +7,11 @@ import {
   TabsTrigger,
   TabsIndicator,
 } from "@/components/ui/tabs"
-import SearchDoctorsForm from "@/features/doctor/components/search-doctors-form"
 import { TypographyH1 } from "@/components/ui/typography"
+import SearchDoctorsForm from "@/features/professionals/doctors/components/search-doctors-form"
+import SearchTherapistssForm from "@/features/professionals/therapists/components/search-therapists-form"
+import SearchPharmacistsForm from "@/features/professionals/pharmacists/components/search-pharmacists.form"
+import SearchLabTechniciansForm from "@/features/professionals/lab-technicians/components/search-pharmacists-form"
 
 export default function BannerSection() {
   return (
@@ -50,13 +53,13 @@ export default function BannerSection() {
                 <SearchDoctorsForm />
               </TabsContent>
               <TabsContent value="therapists" className="pt-6! md:pt-6.5!">
-                Therapists
+                <SearchTherapistssForm />
               </TabsContent>
               <TabsContent value="pharmacists" className="pt-6! md:pt-6.5!">
-                Pharmacists
+                <SearchPharmacistsForm />
               </TabsContent>
               <TabsContent value="lab-technicians" className="pt-6! md:pt-6.5!">
-                Lab Technicians
+                <SearchLabTechniciansForm />
               </TabsContent>
             </Tabs>
           </TabsContent>
