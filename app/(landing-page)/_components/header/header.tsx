@@ -1,10 +1,10 @@
-import DesktopProfile from "./desktop-profile"
+import DesktopProfile from "../desktop-profile"
 import { ScrollHideHeader } from "@/components/ui/scroll-hide-header"
 import { Container } from "@/components/ui/container"
 import DesktopHeaderNavMenu from "./desktop-header-nav-menu"
-import DesktopNavLogo from "./desktop-nav-logo"
+import DesktopNavLogo from "../desktop-nav-logo"
 import MobileNavLogo from "./mobile-nav-logo"
-import MobileProfile from "./mobile-profile"
+import MobileProfile from "../mobile-profile"
 import LazyHamburgerMenu from "./lazy-hamburger-menu"
 
 export default function Header() {

@@ -8,7 +8,7 @@ import {
 import SearchDoctorsForm from "@/features/professionals/doctors/components/search-doctors-form"
 import SearchTherapistssForm from "@/features/professionals/therapists/components/search-therapists-form"
 import SearchPharmacistsForm from "@/features/professionals/pharmacists/components/search-pharmacists.form"
-import SearchLabTechniciansForm from "@/features/professionals/lab-technicians/components/search-pharmacists-form"
+import SearchLabTechniciansForm from "@/features/professionals/lab-technicians/components/search-lab-technicians-form"
 
 export default function ProfessionalsTabContent() {
   return (
