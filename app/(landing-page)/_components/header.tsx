@@ -3,9 +3,9 @@ import { ScrollHideHeader } from "@/components/ui/scroll-hide-header"
 import { Container } from "@/components/ui/container"
 import DesktopHeaderNavMenu from "./desktop-header-nav-menu"
 import DesktopNavLogo from "./desktop-nav-logo"
-import HamburgerMenu from "./hamburger-menu"
 import MobileNavLogo from "./mobile-nav-logo"
 import MobileProfile from "./mobile-profile"
+import LazyHamburgerMenu from "./lazy-hamburger-menu"
 
 export default function Header() {
   return (
@@ -13,13 +13,13 @@ export default function Header() {
       <Container className="hidden md:flex">
         <DesktopHeaderNavMenu className="basis-1/3 md:hidden lg:flex" />
         <div className="flex basis-1/3 items-center lg:hidden">
-          <HamburgerMenu className="md:flex" />
+          <LazyHamburgerMenu className="md:flex" />
         </div>
         <DesktopNavLogo className="basis-1/3" />
         <DesktopProfile className="basis-1/3" />
       </Container>
       <Container className="md:hidden">
-        <HamburgerMenu />
+        <LazyHamburgerMenu />
         <MobileNavLogo />
         <MobileProfile />
       </Container>
