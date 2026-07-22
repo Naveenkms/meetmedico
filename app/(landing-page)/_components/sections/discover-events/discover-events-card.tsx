@@ -22,7 +22,12 @@ export default function DiscoverEventsCard({
     <Card className="w-71.25 flex-1">
       <CardHeader className="flex flex-1 flex-col gap-5">
         <div className="relative h-47.5 w-full rounded-lg">
-          <Image fill src={imgSrc} alt={name} />
+          <Image
+            fill
+            src={imgSrc}
+            alt={name}
+            sizes="(max-width: 360px) 100vw, (max-width: 680px) 50vw,(max-width: 1080px) 33vw, 25vw"
+          />
         </div>
         <div className="flex flex-1 flex-col space-y-4">
           <div className="flex gap-1">
